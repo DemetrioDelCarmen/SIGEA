@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ASESORIAS</title>
+    <link rel="icon" href="IMG/SinFondo.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
+
+
+
+
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-fixed-top" id="navbar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2 mt-1">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+
+                        <span>&#9776</span>
+                    </button>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-8 mt-2">
+                    <h4>ASESORIAS</h4>
+                </div>
+            </div>
+
+
+    </nav>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="nombre"> ESTUDIANTE</div>
+            <ul>
+                <a href="#">
+
+                    <li style="background-color: rgb(48, 117, 103)">
+                        <img src="IMG/iconos/asesoria.png" alt="" class="iclog" />ASESORIAS</li>
+                </a>
+                <a href="estudianteAgendadas.html">
+                    <li><img src="IMG/iconos/agenda.png" alt="" class="iclog" />AGENDADAS</li>
+                </a>
+                <a href="estudianteConcluidas.html">
+                    <li><img src="IMG/iconos/asesoriaconcluida.png" alt="" class="iclog" />CONCLUIDAS</li>
+                </a>
+
+
+            </ul>
+            <div class="row justify-content-center">
+
+                <div id="salir"><input type="button" class="btn btn-info" value="Salir"></div>
+            </div>
+        </nav>
+    </div>
+    <!-- CONTENIDO DE LA PAGINA  -->
+    <div id="content">
+
+
+        <div class="container-fluid" id="titulo">
+            <h4>AGENDA UNA ASESORIAS</h4>
+        </div>
+        <div class="container-fluid">
+
+
+            <!-- materias -->
+            <div class="container-fluid">
+                <div class="row justify-content-around">
+                    <button type="button" class="col-6 col-sm-4 col-md-3 materiaasesoria" data-toggle="modal"
+                        data-target="#myModal">
+                        <div class="nombreasesoria">
+                            Calculo Diferencial
+                        </div>
+                    </button>
+
+                    <!-- Modal -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-cabeza">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h5 class>CALCULO DIREFERENCIAL</h5>
+                                    <h6>Con quién y cuándo...</h6>
+
+                                </div>
+
+                                <div class="modal-body">
+
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="docente">Docente</label>
+                                            <select class="form-control" id="docente">
+                                                <option value="0">Selecciona un Docente</option>
+                                                <option value="1">Mario Alberto Nava Diaz</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="horario">Horario</label>
+                                            <select class="form-control" id="horario">
+                                                <option value="0">Selecciona un Horario</option>
+                                                <option value="1">Lunes 3:00 - 4:00</option>
+
+                                            </select>
+                                        </div>
+                                    </form>
+                                    <table id="tablaestudianteasesoria">
+                                        <thead>
+                                            <tr>
+                                                <th>Participantes</th>
+                                                <th>&nbsp;</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input type="text" class="form-control" id="participante"
+                                                        onkeyup="myFunction(this)" />
+                                                </td>
+                                                <td>
+                                                    <input type="button" class="btn btn-success mx-1" value=" + "
+                                                        id="agregar" />
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-success"  id="registrar">Registrar</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            <script src="js/jquery-3.4.1.min.js"></script>
+            <script src="JS/bootstrap.js"></script>
+            <script src="js/index.js"></script>
+            <script src="js/sweetalert.min.js"></script>
+</body>
+
+</html>

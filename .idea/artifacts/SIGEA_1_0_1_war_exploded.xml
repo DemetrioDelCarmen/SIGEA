@@ -7,6 +7,11 @@
         <element id="directory" name="classes">
           <element id="module-output" name="SIGEA-1.0.1" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql:mysql-connector-java:8.0.16" />
+          <element id="library" level="project" name="jstl:jstl:1.2" />
+          <element id="library" level="project" name="com.google.code.gson:gson:2.8.5" />
+        </element>
       </element>
     </root>
   </artifact>

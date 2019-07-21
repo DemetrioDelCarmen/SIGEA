@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ASESORIAS</title>
+    <link rel="icon" href="IMG/SinFondo.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-fixed-top" id="navbar">
+        <div class="container-fluid">
+            <div class="row justify-content-start">
+                <div class="col-2 pt-1">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+
+                        &#9776
+                    </button>
+                </div>
+                <div class="col-1"> &nbsp;</div>
+                <div class="pt-2" >
+                    <h4>AGENDADAS</h4>
+                </div>
+            </div>
+        </div>
+
+
+    </nav>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="nombre"> ESTUDIANTE</div>
+            <ul>
+                <a href="estudiante.html">
+
+                    <li >
+                        <img src="IMG/iconos/asesoria.png" alt="" class="iclog" />ASESORIAS</li>
+                </a>
+                <a href="#">
+                    <li style="background-color: rgb(48, 117, 103)">
+                        <img src="IMG/iconos/agenda.png" alt="" class="iclog" />AGENDADAS</li>
+                </a>
+                <a href="estudianteConcluidas.html">
+                    <li ><img src="IMG/iconos/asesoriaconcluida.png" alt="" class="iclog" />CONCLUIDAS</li>
+                </a>
+
+
+            </ul>
+            <div class="row justify-content-center">
+
+                <div id="salir"><input type="button" class="btn btn-info" value="Salir"></div>
+            </div>
+        </nav>
+    </div>
+    <!-- CONTENIDO DE LA PAGINA  -->
+    <div id="content">
+
+            <a href="estudiante.html">
+        <div class="container-fluid" id="agendarasesoria">
+            <h4>No tienes asesorías agendadas aún, agenda aquí</h4>
+        </div>
+    </a>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                    <div class="sinasesoria"></div>
+
+                </div>
+        </div>
+
+
+
+
+    </div>
+
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="JS/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

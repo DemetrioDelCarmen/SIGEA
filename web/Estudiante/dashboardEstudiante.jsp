@@ -8,7 +8,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <c:if test="${sessionScope.idEstudiante==null}">
-            <c:redirect url="../iniciarSesion.jsp"></c:redirect>
+    <c:redirect url="../iniciarSesion.jsp"></c:redirect>
 </c:if>
 <html>
 
@@ -22,10 +22,11 @@
     <script src="js/jquery-3.4.1.min.js" type="application/javascript"></script>
     <script src="js/bootstrap.min.js" type="application/javascript"></script>
     <script src="js/index.js" type="application/javascript"></script>
+    <script src="js/sweetalert.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styleR.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
 </head>
-
 
 <body>
 
@@ -44,24 +45,24 @@
             </div>
         </div>
     </div>
+
 </nav>
-
-
 <div class="wrapper">
     <!-- Sidebar  -->
     <nav id="sidebar">
-
-            <h5 id="nombre">
-                ${nombre} &nbsp; ${primerApellido} &nbsp; ${segundoApellido}
-            </h5>
+        <div id="nombre"> ${nombre} ${primerApellido} ${segundoApellido} </div>
         <ul>
             <a href="#">
 
                 <li style="background-color: rgb(48, 117, 103)">
-                    <img src="resources/IMG/asesoria.png" alt="" class="iclog" />ASESORIAS</li>
+                    <img src="resources/IMG/asesoria.png" alt="" class="iclog"/>ASESORIAS
+                </li>
             </a>
-            <a href="#">
-                <li ><img src="resources/IMG/docentes.png" alt="" class="iclog" />AGENDA</li>
+            <a href="estudianteAgendadas.html">
+                <li><img src="resources/IMG/agenda.png" alt="" class="iclog"/>AGENDADAS</li>
+            </a>
+            <a href="estudianteConcluidas.html">
+                <li><img src="resources/IMG/asesoriaconcluida.png" alt="" class="iclog"/>CONCLUIDAS</li>
             </a>
 
 
@@ -77,38 +78,122 @@
 
 
     <div class="container-fluid" id="titulo">
-        <h4>ASESORIAS</h4>
+        <h4>AGENDA UNA ASESORIAS</h4>
     </div>
     <div class="container-fluid">
-        <div class="row">
+
+
+        <!-- materias -->
+        <div class="container-fluid">
+            <div class="row justify-content-around">
+
+                <c:forEach  var="materia" items="${materias}">
+
+                            <table class="table table-striped">
+
+                                <thead>
+                                        <th>Nombre materia</th>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                                <td>
+                                                        ${materia.nombreMateria}
+                                                </td>
+                                        </tr>
+                                </tbody>
+                            </table>
 
 
 
-                        <div class="col-6 col-sm-4 col-md-3 TarjEst">
-                            <div class="numeroest">15</div>
-                            <p>Estudiantes Masculinos </p>
+                   <!-- <button type="button" class="btn col-6 col-sm-4 col-md-3 TarjEst" data-toggle="modal"
+                            data-target="#myModal">
+                        <h5></h5>
+                    </button>
+
+                    -->
+                </c:forEach>
+
+
+                <!-- Modal -->
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-cabeza">
+                                <button type="button" class="close" data-dismiss="modal"></button>
+                                <div class="row">
+
+                                    <div class="col col-md-3"></div>
+                                    <div class="col col-md-6 titleModal">
+                                        <h4>Cálculo diferencial</h4>
+                                        <h6>Con quién y cuándo</h6>
+                                    </div>
+
+                                    <div class="col col-md-3"></div>
+
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="modal-body">
+
+                                <form>
+                                    <div class="form-group">
+                                        <label for="docente">Docente</label>
+                                        <select class="form-control" id="docente">
+                                            <option value="0">Selecciona un Docente</option>
+                                            <option value="1">Mario Alberto Nava Diaz</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="horario">Horario</label>
+                                        <select class="form-control" id="horario">
+                                            <option value="0">Selecciona un Horario</option>
+                                            <option value="1">Lunes 3:00 - 4:00</option>
+
+                                        </select>
+                                    </div>
+                                </form>
+                                <table id="tablaestudianteasesoria">
+                                    <thead>
+                                    <tr>
+                                        <th>Participantes</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="form-control" id="participante"
+                                                   onkeyup="myFunction(this)"/>
+                                        </td>
+                                        <td>
+                                            <input type="button" class="btn btn-success mx-1" value=" + "
+                                                   id="agregar"/>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-success" id="registrar">Registrar</button>
+                            </div>
                         </div>
 
-                        <div class="col-6 col-sm-4 col-md-3 TarjEst">
-                            <div class="numeroest">15</div>
-                            <p>Estudiantes Masculinos </p>
-                        </div>
+                    </div>
+                </div>
 
-                        <div class="col-6 col-sm-4 col-md-3 TarjEst">
-                            <div class="numeroest">15</div>
-                            <p>Estudiantes Masculinos </p>
-                        </div>
 
+            </div>
         </div>
+
+
     </div>
-
-
-
-
 </div>
-
-</div>
-
-
 </body>
 </html>

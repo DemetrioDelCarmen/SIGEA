@@ -32,6 +32,10 @@ public class UsuarioDao implements IUsuarioDao {
                 resultSet.next();
                 usuario.setId_User(resultSet.getInt("id_User"));
                 usuario.setRol_id_rol(resultSet.getInt("rol_id_rol"));
+
+                resultSet.close();
+                preparedStatement.close();
+                conexion.close();
             } catch (SQLException ex) {
                 System.out.println(this.getClass().getCanonicalName() +"@"+ex.getMessage());
             }

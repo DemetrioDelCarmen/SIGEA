@@ -26,6 +26,9 @@ public class RolDao implements IRolDao {
 
             rol.setNombre_rol(resultSet.getString("Nombre_rol"));
 
+            resultSet.close();
+            preparedStatement.close();
+            conexion.close();
         } catch (SQLException e) {
             System.out.println(this.getClass().getCanonicalName()  +"@" + e.getMessage());
         }

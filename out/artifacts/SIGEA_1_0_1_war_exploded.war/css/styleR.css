@@ -142,3 +142,11 @@ a:focus{
 	background: linear-gradient(to bottom, rgb(0, 48, 95) 0%, rgba(0,28,56,1) 100%);
 
 }
+
+
+.titleModal{
+
+    text-align: center;
+    font-size: 30px;
+
+}

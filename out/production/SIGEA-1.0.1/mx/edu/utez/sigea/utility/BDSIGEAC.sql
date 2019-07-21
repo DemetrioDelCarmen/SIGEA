@@ -319,22 +319,12 @@ select * from rol;
 
 
 
-delete from usuario where rol_id_rol = 2;
 select * from usuario;
 -- insertando datos en la tabla usuario  para estudiantes--
-insert into usuario (usuario, contrasena,rol_id_rol) values ('20173ti064','ti064',2);
-insert into usuario (usuario, contrasena,rol_id_rol) values ('20173ti025','ti025',2);
-insert into usuario (usuario, contrasena,rol_id_rol) values ('20173ti011','ti011',2);
-insert into usuario (usuario, contrasena,rol_id_rol) values ('20173ti009','ti009',2);
-insert into usuario (usuario, contrasena,rol_id_rol) values ('20173ti004','ti004',2);
-insert into usuario (usuario, contrasena,rol_id_rol) values ('20173ti024','ti024',2);
-insert into usuario (usuario, contrasena,rol_id_rol) values ('20173ti014','ti014',2);
-insert into usuario (usuario, contrasena,rol_id_rol) values ('20173ti054','ti054',2);
-insert into usuario (usuario, contrasena,rol_id_rol) values ('20173ti001','ti001',2);
-insert into usuario (usuario, contrasena,rol_id_rol) values ('20173ti002','ti002',2);
 
-select * from rol;
-use sigea;
+select usuario, Nombre_rol from usuario inner join rol on usuario.rol_id_rol = rol.id_rol;
+
+
 select * from usuario;
 -- insertando datos en la tabla usuario para docentes --
 insert into usuario (usuario, contrasena,rol_id_rol) values ('bernardohuicochea','dc_huicochea',1);
@@ -354,13 +344,13 @@ insert into usuario (usuario, contrasena,rol_id_rol) values ('cernamadero','dc_m
 
 
 insert into usuario (usuario, contrasena,rol_id_rol) values ('jazminrogel','dc_rogel',3);
-use sigea;
+select usuario, Nombre_rol from usuario inner join rol on usuario.rol_id_rol = rol.id_rol;
 
 -- muestra los usuarios y sus roles --
 select r.Nombre_rol, us.rol_id_rol, us.usuario from usuario us inner join rol r on us.rol_id_rol = r.id_rol;
 select * from usuario;
 
-         
+		
 select Nombre_rol from rol where id_rol = 1;
 
 
@@ -382,6 +372,8 @@ INSERT INTO `sigea`.`estudiante` (`Nombre_estudiante`, `PrimerApellido_estudiant
 INSERT INTO `sigea`.`estudiante` (`Nombre_estudiante`, `PrimerApellido_estudiante`, `SegundoApellido_estudiante`, `division_id_division`, `usuario_id_User`, `idCarrera`) VALUES ('Ana Karen', 'Martínez', 'Gago', '1', '2', '4');
 INSERT INTO `sigea`.`estudiante` (`Nombre_estudiante`, `PrimerApellido_estudiante`, `SegundoApellido_estudiante`, `division_id_division`, `usuario_id_User`, `idCarrera`) VALUES ('Ricardo', 'Juárez', 'Flores', '1', '2', '4');
 -- ok --
+
+
 
 select * from estudiante;
 
@@ -405,7 +397,6 @@ DELIMITER;
 */
 
 
-select * from usuario;
     /*
 select concat(e.Nombre_estudiante," ",e.PrimerApellido_estudiante," ",e.SegundoApellido_estudiante) as Nombre, u.usuario as usuario FROM
 	estudiante e  INNER JOIN  usuario  u ON  e.usuario_id_User = u.id_User;
@@ -413,14 +404,52 @@ select concat(e.Nombre_estudiante," ",e.PrimerApellido_estudiante," ",e.SegundoA
     */
     
     
+
     
-    select * from estudiante;
-    
-	select e.Nombre_estudiante, u.id_User from usuario u inner join 
-			estudiante e on u.id_User = e.usuario_id_User 
-            WHERE e.usuario_id_User = 15;
-      
-      select Nombre_carrera  from carrera inner join 
-      estudiante on carrera.id_carrera = estudiante.idCarrera
-		WHERE estudiante.id_estudiante = 2;
+  -- querys for get user and name student; --
+  
+  select id_estudiante, Nombre_estudiante,PrimerApellido_estudiante,SegundoApellido_estudiante, Nombre_Carrera  from estudiante  
+		inner join  usuario u on usuario_id_User = id_User inner join carrera on idCarrera = id_carrera where id_estudiante =1;
+
+
+  -- querys for get user and name student; --
+  
+  select d.Nombre_docente, d.usuario_id_User, u.usuario from docente d inner join usuario u
+		on d.usuario_id_User = u.id_User;
+        
+        
+        -- query for get all students and user's --
+          select id_User, Nombre_estudiante,PrimerApellido_estudiante,SegundoApellido_estudiante, usuario from estudiante  
+			inner join  usuario u on usuario_id_User = id_User;
+            
+        
+
+        
+		
+            
+			
+			DELIMITER $$
+            CREATE  PROCEDURE sp_cargarMaterias(in idCarreraE int(10))
+            BEGIN
+				SELECT  * from materia where Carrera_id  = idCarreraE;
+                
+			END;
+			DELIMITER ;
+            
+           
+
+            	
+
+				
+            
+            
+            
+            
+            
+
+        
+        
+        
+        
+        
     

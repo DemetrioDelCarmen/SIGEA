@@ -1,7 +1,23 @@
 let onReady =()=> {
 // sidebar toggle
     const btnToggle = document.querySelector('#sidebarCollapse');
+    document.querySelector("#errorID").style.display = 'none';
 
+    let mensajeError = document.querySelector("#mensajeError").innerHTML;
+    if(mensajeError!=""){
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 1500
+        });
+
+        Toast.fire({
+            type: 'error',
+            background: "#FADBD8",
+            title: mensajeError
+        })
+    }
 
     btnToggle.addEventListener('click', function () {
 
@@ -63,14 +79,14 @@ let onReady =()=> {
         }
     }
     document.querySelector("#agregar")
-        .addEventListener("click", agrega);
+        .addEventListener("click",agrega);
 
 
 //borra filas de la tabla de participantes
     $(document).on('click', '.borrar', function (event) {
         event.preventDefault();
         $(this).closest('tr').remove();
-        calculaTotalCompra();
+
     });
 
 //valida la asesoria

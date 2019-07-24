@@ -30,28 +30,34 @@ public class EstudianteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
-        HttpSession sesion = request.getSession();
-        int idEstudiante = (int) sesion.getAttribute("idEstudiante");
 
-        EstudianteDao estudianteDao = new EstudianteDao();
-        Estudiante estudiante = new Estudiante();
-        estudiante.setId_estudiante(idEstudiante);
-        estudiante = estudianteDao.obtenerEstudiante(estudiante);
+            HttpSession sesion = request.getSession();
+            if (sesion.getAttribute("idEstudiante")==null) {
 
-        int idCarrera = estudiante.getIdCarrera();
-        MateriaDao materiaDao = new MateriaDao();
+                    response.sendRedirect("iniciarSesion.jsp");
+            }
 
-        List<Materia> materias = materiaDao.listarMaterias(idCarrera);
+            int idEstudiante = (int) sesion.getAttribute("idEstudiante");
+
+            EstudianteDao estudianteDao = new EstudianteDao();
+            Estudiante estudiante = new Estudiante();
+            estudiante.setId_estudiante(idEstudiante);
+            estudiante = estudianteDao.obtenerEstudiante(estudiante);
+
+            int idCarrera = estudiante.getIdCarrera();
+            MateriaDao materiaDao = new MateriaDao();
+
+            List<Materia> materias = materiaDao.listarMaterias(estudiante);
 
 
-        System.out.println("Estudiante " + estudiante.getNombre_estudiante());
-        System.out.println("--> "+ idCarrera);
-        request.setAttribute("materias",materias);
-        request.setAttribute("nombre", estudiante.getNombre_estudiante());
-        request.setAttribute("primerApellido", estudiante.getPrimerApellido_estudiante());
-        request.setAttribute("segundoApellido", estudiante.getSegundoApellido_estudiante());
+            System.out.println("Estudiante " + estudiante.getNombre_estudiante());
+            System.out.println("--> "+ idCarrera);
+            request.setAttribute("materias",materias);
+            request.setAttribute("nombre", estudiante.getNombre_estudiante());
+            request.setAttribute("primerApellido", estudiante.getPrimerApellido_estudiante());
+            request.setAttribute("segundoApellido", estudiante.getSegundoApellido_estudiante());
 
-        request.getRequestDispatcher("/Estudiante/dashboardEstudiante.jsp").forward(request, response);
+            request.getRequestDispatcher("/Estudiante/dashboardEstudiante.jsp").forward(request, response);
 
 
     }

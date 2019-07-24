@@ -425,17 +425,23 @@ select concat(e.Nombre_estudiante," ",e.PrimerApellido_estudiante," ",e.SegundoA
         
 
         
-		
+			select Nombre_estudiante, Nombre_Carrera, Nombre_Mat,  count(id_Mat) from estudiante inner 
+            join carrera on idCarrera = id_carrera inner join materia on id_carrera = Carrera_id;
+            
             
 			
-			DELIMITER $$
+			DELIMITER //
             CREATE  PROCEDURE sp_cargarMaterias(in idCarreraE int(10))
             BEGIN
-				SELECT  * from materia where Carrera_id  = idCarreraE;
+				SELECT  id_Mat, Nombre_Mat,Carrera_id from materia where Carrera_id  = 2;
                 
 			END;
 			DELIMITER ;
+
+            call sp_cargarMaterias(2);
             
+            
+        
            
 
             	

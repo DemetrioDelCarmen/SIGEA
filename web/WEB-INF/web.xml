@@ -5,6 +5,7 @@
          version="4.0">
 
     <display-name>SIGEA</display-name>
+
     <welcome-file-list>
         <welcome-file>iniciarSesion.jsp</welcome-file>
     </welcome-file-list>

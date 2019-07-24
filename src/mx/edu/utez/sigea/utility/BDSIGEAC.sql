@@ -433,13 +433,15 @@ select concat(e.Nombre_estudiante," ",e.PrimerApellido_estudiante," ",e.SegundoA
 			DELIMITER //
             CREATE  PROCEDURE sp_cargarMaterias(in idCarreraE int(10))
             BEGIN
-				SELECT  * from materia where Carrera_id  = 2;
+				SELECT  id_Mat, Nombre_Mat,Carrera_id from materia where Carrera_id  = 2;
                 
 			END;
 			DELIMITER ;
 
             call sp_cargarMaterias(2);
             
+            
+        
            
 
             	

@@ -2,6 +2,8 @@ package mx.edu.utez.sigea.usuario.controller;
 
 import mx.edu.utez.sigea.estudiante.dao.EstudianteDao;
 import mx.edu.utez.sigea.estudiante.model.Estudiante;
+import mx.edu.utez.sigea.materia.dao.MateriaDao;
+import mx.edu.utez.sigea.materia.model.Materia;
 import mx.edu.utez.sigea.rol.dao.RolDao;
 import mx.edu.utez.sigea.rol.model.Rol;
 import mx.edu.utez.sigea.usuario.dao.UsuarioDao;
@@ -15,8 +17,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 
-@WebServlet(name = "UsuarioServlet", urlPatterns = "/UsuarioServlet")
+@WebServlet(name = "UsuarioServlet", urlPatterns = "UsuarioServlet")
 public class UsuarioServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String usuario = request.getParameter("usuario");
@@ -40,7 +43,7 @@ public class UsuarioServlet extends HttpServlet {
 
 
         if (user.getId_User() == 0) {
-            request.setAttribute("error", "Error, el usuario y o contraseña no existen");
+            request.setAttribute("errorInicioSesion", "Usuario y/o contraseña erróneos");
             request.getRequestDispatcher("iniciarSesion.jsp").forward(request, response);
 
         } else {
@@ -87,5 +90,10 @@ public class UsuarioServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+
+
     }
 }
+
+
+

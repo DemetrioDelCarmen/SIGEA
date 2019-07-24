@@ -12,7 +12,11 @@
 <header>
     <script src="js/jquery-3.4.1.min.js" type="application/javascript"></script>
     <script src="js/bootstrap.min.js" type="application/javascript"></script>
+    <script src="js/index.js" type="application/javascript"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="css/sweetalert.css">
     <link rel="stylesheet" href="css/style.css">
 </header>
 <head>
@@ -63,6 +67,19 @@
             <h6><a href="#">¿Olvidaste tu contraseña?</a></h6>
         </div>
 
+            <div>
+                <div class="row">
+                    <div class="col col-md-3"></div>
+                    <div class="col col-md-6">
+
+                        <div class="alert alert-danger" role="alert" id="errorID">
+                              <h6 id="mensajeError">${errorInicioSesion}</h6>
+                        </div>
+
+                    </div>
+                    <div class="col col-md-3"></div>
+                </div>
+            </div>
 
 
 </body>

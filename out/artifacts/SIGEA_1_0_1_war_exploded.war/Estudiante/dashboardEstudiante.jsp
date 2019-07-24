@@ -36,7 +36,7 @@
             <div class="col-2 mt-1">
                 <button type="button" id="sidebarCollapse" class="btn btn-info">
 
-                    <span>&#9776</span>
+                    <span>&#9776;</span>
                 </button>
             </div>
             <div class="col-1"></div>
@@ -87,31 +87,31 @@
         <div class="container-fluid">
             <div class="row justify-content-around">
 
-                <c:forEach  var="materia" items="${materias}">
 
-                            <table class="table table-striped">
+            <div class="row justify-content-around">
 
-                                <thead>
-                                        <th>Nombre materia</th>
-                                </thead>
-                                <tbody>
-                                        <tr>
-                                                <td>
-                                                        ${materia.nombreMateria}
-                                                </td>
-                                        </tr>
-                                </tbody>
-                            </table>
+                <div class="col-6 col-md-8">
+                    <c:forEach items="${materias}" var="materia">
+                        <button value="${materia.idMat}" type="button" class="col-6  col-sm-4 materiaasesoria">
+                            <div class="nombreasesoria">
+                                    ${materia.nombreMateria}
+                            </div>
+
+                        </button>
+                    </c:forEach>
+                </div>
+
+            </div>
 
 
 
-                   <!-- <button type="button" class="btn col-6 col-sm-4 col-md-3 TarjEst" data-toggle="modal"
-                            data-target="#myModal">
-                        <h5></h5>
-                    </button>
 
-                    -->
-                </c:forEach>
+
+
+
+
+
+
 
 
                 <!-- Modal -->
@@ -195,5 +195,6 @@
 
     </div>
 </div>
+
 </body>
 </html>

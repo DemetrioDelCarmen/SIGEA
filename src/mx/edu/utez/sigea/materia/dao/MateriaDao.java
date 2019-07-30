@@ -17,12 +17,12 @@ public class MateriaDao implements IMateriaDao {
 
         List<Materia> materias = new ArrayList<>();
 
-        String sp_materias = "SELECT  id_Mat, Nombre_Mat,Carrera_id from materia where Carrera_id  = ?;";
+        String sp_listaMaterias = "call sp_listaMaterias(?);";
 
 
         try {
             Connection conexion = new Conexion().obtenerConexion();
-            PreparedStatement preparedStatement = conexion.prepareCall(sp_materias);
+            PreparedStatement preparedStatement = conexion.prepareCall(sp_listaMaterias);
             preparedStatement.setInt(1, estudiante.getIdCarrera());
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -33,7 +33,7 @@ public class MateriaDao implements IMateriaDao {
 
                 materia.setIdMat(resultSet.getInt("id_Mat"));
                 materia.setNombreMateria(resultSet.getString("Nombre_Mat"));
-                materia.setCarreraId(resultSet.getInt("Carrera_id"));
+                materia.setCarreraId(resultSet.getInt("id_carrera"));
 
                 materias.add(materia);
                 System.out.println(materia.getNombreMateria());
@@ -48,6 +48,8 @@ public class MateriaDao implements IMateriaDao {
         }
         return materias;
     }
+
+
 
 
 }

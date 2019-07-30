@@ -1,23 +1,6 @@
 let onReady =()=> {
 // sidebar toggle
     const btnToggle = document.querySelector('#sidebarCollapse');
-    document.querySelector("#errorID").style.display = 'none';
-
-    let mensajeError = document.querySelector("#mensajeError").innerHTML;
-    if(mensajeError!=""){
-        const Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 1500
-        });
-
-        Toast.fire({
-            type: 'error',
-            background: "#FADBD8",
-            title: mensajeError
-        })
-    }
 
     btnToggle.addEventListener('click', function () {
 
@@ -25,6 +8,8 @@ let onReady =()=> {
 
         document.getElementById('content').classList.toggle('active');
     });
+
+
 
 //hace mayusculas
     function myFunction(obj) {
@@ -78,9 +63,11 @@ let onReady =()=> {
             })
         }
     }
-    document.querySelector("#agregar")
+    /*  document.querySelector("#agregar")
         .addEventListener("click",agrega);
 
+
+     */
 
 //borra filas de la tabla de participantes
     $(document).on('click', '.borrar', function (event) {
@@ -128,4 +115,6 @@ let onReady =()=> {
         .addEventListener("click", validaAsesoria);
 
 }
-document.addEventListener("DOMContentLoaded",onReady);
+
+
+addEventListener("DOMContentLoaded",onReady);

@@ -88,112 +88,98 @@
             <div class="row justify-content-around">
 
 
-            <div class="row justify-content-around">
+                <div class="row justify-content-around">
 
-                <div class="col-6 col-md-8">
-                    <c:forEach items="${materias}" var="materia">
-                        <button value="${materia.idMat}" type="button" class="col-6  col-sm-4 materiaasesoria">
-                            <div class="nombreasesoria">
-                                    ${materia.nombreMateria}
-                            </div>
+                    <div class="col-6 col-md-8">
+                        <c:forEach items="${materias}" var="materia">
+                            <button value="${materia.idMat}" type="button"
+                                    class="col-6
+                                col-sm-4 materiaasesoria"
+                                    data-toggle="modal"
+                                    data-target="#modalRegistro">
+                                <div class="nombreasesoria">
+                                        ${materia.nombreMateria}
+                                </div>
 
-                        </button>
-                    </c:forEach>
+                            </button>
+                        </c:forEach>
+                    </div>
+
                 </div>
-
-            </div>
-
-
-
-
-
-
-
-
-
-
 
 
                 <!-- Modal -->
-                <div id="myModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
+                <div class="modal fade" id="modalRegistro" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="nombreMateriaModal">Cálculo diferencial</h5>
 
-                        <!-- Modal content-->
-                        <div class="modal-content" id="">
-                            <div class="modal-cabeza">
-                                <button type="button" class="close" data-dismiss="modal"></button>
-                                <div class="row">
-
-                                    <div class="col col-md-3"></div>
-                                    <div class="col col-md-6 titleModal">
-                                        <h4>Cálculo diferencial</h4>
-                                        <h6>Con quién y cuándo</h6>
-                                    </div>
-
-                                    <div class="col col-md-3"></div>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
 
 
+                        <div class="modal-body">
+
+                            <form>
+                                <div class="form-group">
+                                    <label for="docente">Docente</label>
+
+                                    <select class="form-control" name="docente"id="docente">
+                                        <option value="0">Selecciona un Docente</option>
+                                    </select>
                                 </div>
 
 
-                            </div>
+                                <div class="form-group">
+                                    <label for="horario">Horario</label>
 
-                            <div class="modal-body">
+                                    <select class="form-control"  name="horario" id="horario">
+                                        <option value="0">Selecciona un Horario</option>
+                                    </select>
 
-                                <form>
-                                    <div class="form-group">
-                                        <label for="docente">Docente</label>
-                                        <select class="form-control" id="docente">
-                                            <option value="0">Selecciona un Docente</option>
-                                            <option value="1">Mario Alberto Nava Diaz</option>
 
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="horario">Horario</label>
-                                        <select class="form-control" id="horario">
-                                            <option value="0">Selecciona un Horario</option>
-                                            <option value="1">Lunes 3:00 - 4:00</option>
-
-                                        </select>
-                                    </div>
-                                </form>
-                                <table id="tablaestudianteasesoria">
-                                    <thead>
-                                    <tr>
-                                        <th>Participantes</th>
-                                        <th>&nbsp;</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <input type="text" class="form-control" id="participante"
-                                                   onkeyup="myFunction(this)"/>
-                                        </td>
-                                        <td>
-                                            <input type="button" class="btn btn-success mx-1" value=" + "
-                                                   id="agregar"/>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-success" id="registrar">Registrar</button>
-                            </div>
+                                </div>
+                            </form>
+                            <table id="tablaestudianteasesoria">
+                                <thead>
+                                <tr>
+                                    <th>Participantes</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="text" class="form-control" id="participante"
+                                               onkeyup="myFunction(this)"/>
+                                    </td>
+                                    <td>
+                                        <input type="button" class="btn btn-success mx-1" value=" + "
+                                               id="agregar"/>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
-
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-success" id="registrar">Registrar</button>
+                        </div>
                     </div>
+
                 </div>
-
-
             </div>
+
+
         </div>
-
-
     </div>
+
+
+</div>
 </div>
 
 </body>

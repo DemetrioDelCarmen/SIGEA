@@ -68,8 +68,8 @@ public class UsuarioServlet extends HttpServlet {
                 System.out.println("Redirigir al dashboard docente");
                 System.out.println("Logeado " + user.getId_User() + " rol " + rol.getNombre_rol());
                 HttpSession sesion = request.getSession();
-                sesion.setAttribute("id", user.getId_User());
-                request.setAttribute("usuario", user.getId_User());
+                sesion.setAttribute("idDocente", user.getId_User());
+                response.sendRedirect("");
 
 
             } else if (tipoUsuario.equalsIgnoreCase("Administrador")) {

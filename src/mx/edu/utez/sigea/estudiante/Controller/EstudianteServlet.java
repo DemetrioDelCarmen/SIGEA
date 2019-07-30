@@ -58,7 +58,5 @@ public class EstudianteServlet extends HttpServlet {
             request.setAttribute("segundoApellido", estudiante.getSegundoApellido_estudiante());
 
             request.getRequestDispatcher("/Estudiante/dashboardEstudiante.jsp").forward(request, response);
-
-
     }
 }

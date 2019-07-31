@@ -69,17 +69,17 @@ public class UsuarioServlet extends HttpServlet {
                 System.out.println("Logeado " + user.getId_User() + " rol " + rol.getNombre_rol());
                 HttpSession sesion = request.getSession();
                 sesion.setAttribute("idDocente", user.getId_User());
-                response.sendRedirect("");
+                response.sendRedirect("DocenteServlet");
 
 
             } else if (tipoUsuario.equalsIgnoreCase("Administrador")) {
                 System.out.println("Redirigir al dashboard admin");
                 System.out.println("Logeado " + user.getId_User() + " rol " + rol.getNombre_rol());
                 HttpSession sesion = request.getSession();
-                sesion.setAttribute("id", user.getId_User());
+                sesion.setAttribute("idAdministrador", user.getId_User());
                 request.setAttribute("usuario", user.getUsuario());
 
-                request.getRequestDispatcher("EstudianteServlet").forward(request, response);
+                response.sendRedirect("AdministradorServlet");
 
             }
 

@@ -107,6 +107,15 @@ a:focus{
 	margin-bottom: 20PX;
 }
 
+
+#tituloAdmin{
+	width: 100%;
+	background: #ACACAC;
+	color: #fff;
+	text-align: center;
+	margin-top: 15PX;
+	margin-bottom: 20PX;
+}
 .TarjEst{
 	margin: 30px;
 	z-index: 0;

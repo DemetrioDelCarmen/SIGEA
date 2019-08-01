@@ -1,0 +1,74 @@
+html body{
+    font-size: 15px;
+}
+.separador{
+
+
+        margin-bottom: 4rem;
+
+
+
+}
+
+.th_listadoDocentes{
+
+    background-color: #1A537A;
+    color: white;
+    height: 10px;
+    
+}
+
+.tListadoDocentes{
+    text-align: center;
+}
+
+.btnAsignar{
+
+        align-self: center;
+        border-radius: 15px;
+        width: 80px;
+        height: 30px;
+        margin-right: 1em;
+
+}
+
+.btnEliminar{
+
+    align-self: center;
+    border-radius: 15px;
+    width: 80px;
+    height: 30px;
+    margin-right: 1em;
+
+}
+
+.tb_listadoDocentes{
+   
+    border: .9px solid #ACACAC;
+}
+
+.tituloDocentes{
+
+        font-size: 20px;
+        color: white;
+        background-color: #1A537A ;
+        margin-top: 10px;
+
+}
+
+#tituloApartado{
+
+
+            text-align: center;
+
+            background-color: #ACACAC;
+            margin-top: 10px;
+            height: 45px;
+            font-weight: bold;
+            width: 100%;
+            color: white;
+            padding-top: 10px;
+
+
+}
+

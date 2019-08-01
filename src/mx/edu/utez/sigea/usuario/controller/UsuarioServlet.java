@@ -34,25 +34,20 @@ public class UsuarioServlet extends HttpServlet {
         UsuarioDao usuarioDao = new UsuarioDao();
         user = usuarioDao.obtenerUsuario(user);
 
-
-        RolDao rolDao = new RolDao();
-        int id = Integer.valueOf(user.getRol_id_rol());
-        Rol rol = new Rol();
-        rol.setId_rol(id);
-        rol = rolDao.obtenerRol(rol);
-
-
         if (user.getId_User() == 0) {
             request.setAttribute("errorInicioSesion", "Usuario y/o contraseña erróneos");
             request.getRequestDispatcher("iniciarSesion.jsp").forward(request, response);
 
         } else {
-
+            RolDao rolDao = new RolDao();
+            int id = Integer.valueOf(user.getRol_id_rol());
+            Rol rol = new Rol();
+            rol.setId_rol(id);
+            rol = rolDao.obtenerRol(rol);
 
             String tipoUsuario = rol.getNombre_rol();
 
             if (tipoUsuario.equalsIgnoreCase("Estudiante")) {
-
 
 
                 System.out.println("Redirigido a estudianteServlet");
@@ -61,7 +56,6 @@ public class UsuarioServlet extends HttpServlet {
                 HttpSession sesion = request.getSession();
                 sesion.setAttribute("idEstudiante", user.getId_User());
                 response.sendRedirect("EstudianteServlet");
-
 
 
             } else if (tipoUsuario.equalsIgnoreCase("Docente")) {
@@ -73,12 +67,13 @@ public class UsuarioServlet extends HttpServlet {
 
 
             } else if (tipoUsuario.equalsIgnoreCase("Administrador")) {
-                System.out.println("Redirigir al dashboard admin");
+
+
+                System.out.println("Redirigido a estudianteServlet");
+
                 System.out.println("Logeado " + user.getId_User() + " rol " + rol.getNombre_rol());
                 HttpSession sesion = request.getSession();
                 sesion.setAttribute("idAdministrador", user.getId_User());
-                request.setAttribute("usuario", user.getUsuario());
-
                 response.sendRedirect("AdministradorServlet");
 
             }
@@ -89,7 +84,6 @@ public class UsuarioServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 
 
     }

@@ -1,6 +1,18 @@
 let onReady =()=> {
 
+    $("#estadistica").click((evt)=>{
+        $("#nav input").val("Estadistica");
+        $("#nav").attr("action", "AdministradorServlet");
+        $("#nav").attr("method", "POST");
+        $("#nav").submit();
+    });
 
+    $("#docente").click((evt)=>{
+        $("#nav input").val("ListarDocentes");
+        $("#nav").attr("action", "AdministradorServlet");
+        $("#nav").attr("method", "POST");
+        $("#nav").submit();
+    });
 
     let cargaModal = (evt) => {
         let id;

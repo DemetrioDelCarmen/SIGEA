@@ -25,7 +25,7 @@ public class AdministradorDao implements IAdminDao {
 
             docente.setNombre_docente(resultSet.getString("Nombre_docente"));
             docente.setPrimerApellido_Docente(resultSet.getString("PrimerApellido_docente"));
-            docente.setSegundoApellido_Docente(resultSet.getString("PrimerApellido_docente"));
+            docente.setSegundoApellido_Docente(resultSet.getString("SegundoApellido_docente"));
             //cerramos las conexiones
             resultSet.close();
             preparedStatement.close();

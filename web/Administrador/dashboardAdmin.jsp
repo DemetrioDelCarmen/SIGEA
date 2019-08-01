@@ -7,7 +7,7 @@
 --%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<c:if test="${sessionScope.idEstudiante==null}">
+<c:if test="${sessionScope.idAdministrador==null}">
     <c:redirect url="../iniciarSesion.jsp"></c:redirect>
 </c:if>
 <html>
@@ -21,7 +21,7 @@
 
     <script src="js/jquery-3.4.1.min.js" type="application/javascript"></script>
     <script src="js/bootstrap.min.js" type="application/javascript"></script>
-    <script src="js/index.js" type="application/javascript"></script>
+    <script src="js/Administrador.js" type="application/javascript"></script>
     <script src="js/sweetalert.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styleR.css">
@@ -41,7 +41,7 @@
             </div>
             <div class="col-1"></div>
             <div class="col-8 mt-2">
-                <h4>ESTADISTICAS</h4>
+                <h4>ESTADISTICAS para ${nombreDocente}</h4>
             </div>
         </div>
 
@@ -50,16 +50,19 @@
 <div class="wrapper">
     <!-- Sidebar  -->
     <nav id="sidebar">
-        <div id="nombre"> Jazmin Rogel Arismendi</div>
+        <div id="nombre"> ${nombreDocente} ${primerApellidoDocente} ${segundoApellidoDocente}</div>
         <ul>
-            <a href="estadisticas.html">
+            <div id="estadistica">
 
-                <li style="background-color: rgb(48, 117, 103)">
-                    <img src="IMG/iconos/estadistica.png"  alt="" class="iclog"/>ESTADISTICAS</li>
-            </a>
-            <a href="docentes.html">
-                <li><img src="IMG/iconos/docentes.png"  alt="" class="iclog"/>DOCENTES</li>
-            </a>
+                <li style="cursor:pointer; background-color: rgb(48, 117, 103)">
+                    <img src="resources/IMG/estadistica.png" alt="" class="iclog"/>ESTADISTICAS</li>
+            </div>
+            <div id="docente">
+                <li style="cursor:pointer;"><img src="resources/IMG/docentes.png" alt="" class="iclog"/>DOCENTES</li>
+            </div>
+            <form id="nav">
+                <input type="hidden" name="accion"/>
+            </form>
 
 
         </ul>

@@ -2,6 +2,7 @@ package mx.edu.utez.sigea.administrador.controller;
 
 import mx.edu.utez.sigea.administrador.dao.AdministradorDao;
 import mx.edu.utez.sigea.docente.model.Docente;
+import mx.edu.utez.sigea.docente.model.DocenteAsesoria;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -50,6 +51,11 @@ public class AdministradorServlet extends HttpServlet {
                  resultado de la consulta esperada, y esa mostrarla en la tabla
 
                  */
+
+
+                List<DocenteAsesoria> listadoDocentes = administradorDao.obtenerDocentes();
+                request.setAttribute("listadoDocentes", listadoDocentes);
+
                 request.setAttribute("nombreDocente", docente.getNombre_docente());
                 request.setAttribute("primerApellidoDocente", docente.getPrimerApellido_Docente());
                 request.setAttribute("segundoApellidoDocente", docente.getSegundoApellido_Docente());

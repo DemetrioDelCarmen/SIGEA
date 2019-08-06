@@ -52,11 +52,12 @@ public class EstudianteServlet extends HttpServlet {
 
             System.out.println("Estudiante " + estudiante.getNombre_estudiante());
             System.out.println("--> "+ idCarrera);
+            System.out.println("--> genero : "+  estudiante.getIdGenero());
             request.setAttribute("materias",materias);
             request.setAttribute("nombre", estudiante.getNombre_estudiante());
             request.setAttribute("primerApellido", estudiante.getPrimerApellido_estudiante());
             request.setAttribute("segundoApellido", estudiante.getSegundoApellido_estudiante());
-
+            request.setAttribute("genero",estudiante.getIdGenero());
             request.getRequestDispatcher("/Estudiante/dashboardEstudiante.jsp").forward(request, response);
     }
 }

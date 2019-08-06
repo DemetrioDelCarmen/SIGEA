@@ -16,8 +16,8 @@ public class EstudianteDao implements IEstudianteDao {
     @Override
     public Estudiante obtenerEstudiante(Estudiante estudiante) {
 
-        String sqlNombreEstudiante = "select Nombre_estudiante,PrimerApellido_estudiante,SegundoApellido_estudiante,idCarrera  from estudiante\n" +
-                "\t\tinner join  usuario u on usuario_id_User = id_User where usuario_id_User = ?;";
+        String sqlNombreEstudiante = "select Nombre_estudiante,PrimerApellido_estudiante,SegundoApellido_estudiante,idCarrera, idGenero from estudiante\n" +
+                "                inner join  usuario u on usuario_id_User = id_User where usuario_id_User = ?;";
 
         try {
 
@@ -32,6 +32,7 @@ public class EstudianteDao implements IEstudianteDao {
             estudiante.setPrimerApellido_estudiante(resultSet.getString(2));
             estudiante.setSegundoApellido_estudiante(resultSet.getString(3));
             estudiante.setIdCarrera(resultSet.getInt(4));
+            estudiante.setIdGenero(resultSet.getInt("idGenero"));
             resultSet.close();
             preparedStatement.close();
             conexion.close();

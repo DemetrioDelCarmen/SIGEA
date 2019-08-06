@@ -1,6 +1,7 @@
 package mx.edu.utez.sigea.administrador.dao;
 
 import mx.edu.utez.sigea.docente.model.Docente;
+import mx.edu.utez.sigea.docente.model.DocenteAsesoria;
 import mx.edu.utez.sigea.utility.Conexion;
 
 import java.sql.Connection;
@@ -15,10 +16,10 @@ public class AdministradorDao implements IAdminDao {
     public Docente obtenerNombreDocente(Docente docente) {
 
         String sp_ObtenerInfoDocente = "call  sp_obtenerInfoDocente(?);";
-        try{
+        try {
             Connection conexion = new Conexion().obtenerConexion();
-            PreparedStatement  preparedStatement = conexion.prepareCall(sp_ObtenerInfoDocente);
-            preparedStatement.setInt(1,docente.getId_Docente());
+            PreparedStatement preparedStatement = conexion.prepareCall(sp_ObtenerInfoDocente);
+            preparedStatement.setInt(1, docente.getId_Docente());
 
             ResultSet resultSet = preparedStatement.executeQuery();
             resultSet.next();
@@ -32,20 +33,52 @@ public class AdministradorDao implements IAdminDao {
             conexion.close();
 
 
-        }catch (SQLException ex){
-            System.out.println(this.getClass().getCanonicalName() +"@"+ ex.getMessage());
+        } catch (SQLException ex) {
+            System.out.println(this.getClass().getCanonicalName() + "@" + ex.getMessage());
         }
 
         return docente;
     }
 
     @Override
-    public List<Docente> obtenerDocentes() {
-        List<Docente> docentes = new ArrayList<>();
+    public List<DocenteAsesoria> obtenerDocentes() {
+        List<DocenteAsesoria> docentesAsesorias = new ArrayList<>();
+
+        String sp_listadoAsesoriasDocente = "call sp_listadoAsesoriasDocente;";
+
+        try {
+
+            Connection conexion = new Conexion().obtenerConexion();
+            PreparedStatement preparedStatement = conexion.prepareCall(sp_listadoAsesoriasDocente);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            DocenteAsesoria  docenteAsesoria;
+            while (resultSet.next()){
+
+                docenteAsesoria = new DocenteAsesoria();
+
+                docenteAsesoria.setId_Docente(resultSet.getInt("id_Docente"));
+                docenteAsesoria.setNombreDocente(resultSet.getString("nombreDocente"));
+                docenteAsesoria.setNombre_Mat(resultSet.getString("Nombre_Mat"));
+                docenteAsesoria.setAsesoriasImpartidas(resultSet.getInt("asesoriasImpartidas"));
+                docenteAsesoria.setHorario(resultSet.getString("horario"));
+
+                docentesAsesorias.add(docenteAsesoria);
+
+                System.out.println(docenteAsesoria.getId_Docente());
+                System.out.println(docenteAsesoria.getNombreDocente());
+                System.out.println(docenteAsesoria.getHorario());
+
+            }
 
 
+            resultSet.close();
+            preparedStatement.close();
+            conexion.close();
+        } catch (SQLException ex) {
+            System.out.println(this.getClass().getCanonicalName() + "@" + ex.getMessage());
 
-
-        return docentes;
+        }
+            return docentesAsesorias;
+        }
     }
-}

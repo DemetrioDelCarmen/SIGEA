@@ -23,6 +23,7 @@
     <script src="js/bootstrap.min.js" type="application/javascript"></script>
     <script src="js/index.js" type="application/javascript"></script>
     <script src="js/sweetalert.min.js"></script>
+    <script src="js/dbEstudiante.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styleR.css">
     <link rel="stylesheet" href="css/sweetalert.css">
@@ -133,15 +134,40 @@
                                     </select>
                                 </div>
 
-
                                 <div class="form-group">
+
+                                    <label for="dia">Día para la asesoría</label>
+
+                                    <select class="form-control"  name="dia" id="dia">
+                                        <option value="0">Elige un día</option>
+                                    </select>
+
                                     <label for="horario">Horario</label>
 
                                     <select class="form-control"  name="horario" id="horario">
                                         <option value="0">Selecciona un Horario</option>
                                     </select>
 
+                                </div>
 
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Tema</span>
+                                    </div>
+                                    <input type="text" class="form-control" aria-label="Sizing example input"
+                                           aria-describedby="inputGroup-sizing-default"
+                                    placeholder="Ej. Javascript">
+                                </div>
+
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Comentario</span>
+                                    </div>
+                                    <input type="text"  class="form-control" aria-label="Sizing example input"
+                                           aria-describedby="inputGroup-sizing-default"
+                                           placeholder="Ej. Funciones Lambda">
                                 </div>
                             </form>
                             <table id="tablaestudianteasesoria">
@@ -149,6 +175,7 @@
                                 <tr>
                                     <th>Participantes</th>
                                     <th>&nbsp;</th>
+                                    <th>Detalles</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -160,6 +187,10 @@
                                     <td>
                                         <input type="button" class="btn btn-success mx-1" value=" + "
                                                id="agregar"/>
+                                    </td>
+
+                                    <td>
+                                        <input type="text" class="form-control" id="detallesParticipante">
                                     </td>
                                 </tr>
                                 </tbody>

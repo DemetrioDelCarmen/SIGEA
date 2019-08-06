@@ -34,23 +34,23 @@
 
 <nav class="navbar navbar-fixed-top" id="navbar">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-2 mt-1">
+
+            <div class="row col-2 mt-1">
                 <button type="button" id="sidebarCollapse" class="btn btn-info">
 
                     <span>&#9776</span>
                 </button>
             </div>
 
-            <div id="centrado">
-                <div class="col col-md-3"></div>
-                <div class="col col-md-6"><h1>Docentes</h1></div>
-                <div class="col col-md-3"></div>
-            </div>
+
+
+
+                <div class="col-6"><h1>Docentes</h1></div>
+
+
 
 
         </div>
-
 
 
 
@@ -85,64 +85,47 @@
 <div id="content">
 
 
-    <div class="container-fluid " id="tituloApartado">
-        <h2>Docentes</h2>
-    </div>
 
 
-        <div class="row centrar">
-
-                <div class="col col-md-2"></div>
-                <div class="col col-lg-12">
-
-                    <div class="tablaDocentesAsesorias">
-                        <div class="row">
-
-                            <div class="col col-lg-8">
-                                <table class="table  tListadoDocentes">
-                                    <thead class="th_listadoDocentes">
-                                    <tr>
-                                        <th>Nombre</th>
-                                        <th>Materias</th>
-                                        <th>Asesorías Realizadas</th>
-                                        <th>Horario</th>
-                                        <th>Acciones</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody class="tb_listadoDocentes">
-                                    <tr>
-                                        <td class="tb_listadoDocentes">Bernardo Huicochea Naranjo</td>
-                                        <td class="tb_listadoDocentes">lorem</td>
-                                        <td class="tb_listadoDocentes">lorem</td>
-                                        <td class="tb_listadoDocentes">lorem</td>
-                                        <td class="tb_listadoDocentes">
-                                            <button class="btn btn-primary btn-sm btnAsignar">Asignar</button>
-                                            <button class="btn btn-danger btn-sm btnEliminar">Eliminar</button>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                </div>
-
-
-
-
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12" id="tituloApartado">
+            <h2>Docentes</h2>
         </div>
 
+            <div class="col-10 col-sm-10">
+                        <table class="table  tListadoDocentes">
+                            <thead class="th_listadoDocentes">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Materias</th>
+                                <th>Asesorías Realizadas</th>
+                                <th>Horario</th>
+                                <th>Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody class="tb_listadoDocentes">
+                            <c:forEach var="dc_materias" items="${listadoDocentes}">
+                                <tr>
 
-
-
-
-
-
+                                    <td class="tb_listadoDocentes">${dc_materias.nombreDocente}</td>
+                                    <td class="tb_listadoDocentes">${dc_materias.nombre_Mat}</td>
+                                    <td class="tb_listadoDocentes">${dc_materias.asesoriasImpartidas}</td>
+                                    <td class="tb_listadoDocentes">${dc_materias.horario}</td>
+                                    <td class="tb_listadoDocentes">
+                                        <button class="btn btn-primary btn-sm btnAsignar" data-id="${dc_materias.id_Docente}" >Asignar</button>
+                                        <button class="btn btn-danger btn-sm btnEliminar" data-id="${dc_materias.id_Docente}">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+    </div>
 
 </div>
+
 
 </body>
 </html>

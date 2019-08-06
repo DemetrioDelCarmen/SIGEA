@@ -6,23 +6,13 @@ public class Estudiante {
     private String nombre_estudiante;
     private String primerApellido_estudiante;
     private String segundoApellido_estudiante;
-
     private int division_id_division;
     private int usuario_id_User;
     private int idCarrera;
+    private int idGenero;
+
 
     public Estudiante (){}
-
-    public Estudiante(int id_estudiante, String nombre_estudiante, String primerApellido_estudiante, String segundoApellido_estudiante, int division_id_division, int usuario_id_User, int idCarrera) {
-        this.id_estudiante = id_estudiante;
-        this.nombre_estudiante = nombre_estudiante;
-        this.primerApellido_estudiante = primerApellido_estudiante;
-        this.segundoApellido_estudiante = segundoApellido_estudiante;
-        this.division_id_division = division_id_division;
-        this.usuario_id_User = usuario_id_User;
-        this.idCarrera = idCarrera;
-    }
-
 
     public int getId_estudiante() {
         return id_estudiante;
@@ -80,6 +70,15 @@ public class Estudiante {
         this.idCarrera = idCarrera;
     }
 
+    public int getIdGenero() {
+        return idGenero;
+    }
+
+    public void setIdGenero(int idGenero) {
+        this.idGenero = idGenero;
+    }
+
+
     @Override
     public String toString() {
         return "Estudiante{" +
@@ -90,7 +89,7 @@ public class Estudiante {
                 ", division_id_division=" + division_id_division +
                 ", usuario_id_User=" + usuario_id_User +
                 ", idCarrera=" + idCarrera +
+                ", idGenero=" + idGenero +
                 '}';
     }
-
 }

@@ -15,12 +15,6 @@ let onReadyAdminProfile =()=> {
     });
 
 
-
-
-
-
-
-
 // sidebar toggle
     const btnToggle = document.querySelector('#sidebarCollapse');
 

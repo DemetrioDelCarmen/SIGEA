@@ -1,6 +1,7 @@
 package mx.edu.utez.sigea.docente.dao;
 
 import mx.edu.utez.sigea.docente.model.Docente;
+import mx.edu.utez.sigea.docente.model.DocenteMateria;
 import mx.edu.utez.sigea.utility.Conexion;
 
 import java.sql.Connection;
@@ -12,56 +13,47 @@ import java.util.List;
 
 public class DocenteDao implements IDocenteDao {
     @Override
-    public List<Docente> obtenerDocenteMateria(int idMat) {
-        List<Docente> docentes = new ArrayList<>();
+    public List<DocenteMateria> obtenerDocenteMateria(int idMat) {
 
-            String sqlObtenerDocentes = "CALL sp_listarMateriasDocente(?)";
-            try{
+        List<DocenteMateria> docentesMaterias = new ArrayList<>();
 
-                Connection conexion = new Conexion().obtenerConexion();
-                PreparedStatement preparedStatement = conexion.prepareCall(sqlObtenerDocentes);
-                preparedStatement.setInt(1,idMat);
-                ResultSet resultSet = preparedStatement.executeQuery();
+        String sp_listarMateriasDocente = "call sp_listarMateriasDocente(?);";
+        try{
+            Connection conexion = new Conexion().obtenerConexion();
+            PreparedStatement preparedStatement = conexion.prepareCall(sp_listarMateriasDocente);
+            preparedStatement.setInt(1,idMat);
+            ResultSet resultSet = preparedStatement.executeQuery();
 
-                Docente docente;
-                while (resultSet.next()){
-                    docente = new Docente();
+            DocenteMateria docenteMateria;
+            while (resultSet.next()){
+                docenteMateria = new DocenteMateria();
 
-                    docente.setId_Docente(resultSet.getInt("id_Docente"));
-                    docente.setNombre_docente(resultSet.getString("Nombre_docente"));
-                    docente.setPrimerApellido_Docente(resultSet.getString("PrimerApellido_Docente"));
-                    docente.setSegundoApellido_Docente(resultSet.getString("SegundoApellido_Docente"));
-                    docente.setUsuario_id_User(resultSet.getInt("usuario_id_User"));
+                docenteMateria.setIdDocente(resultSet.getInt("id_Docente"));
+                docenteMateria.setNombreDocente(resultSet.getString("Nombre_docente"));
+                docenteMateria.setPrimerApellidoDocente(resultSet.getString("PrimerApellido_Docente"));
+                docenteMateria.setSegundoApellidoDocente(resultSet.getString("SegundoApellido_Docente"));
+                docenteMateria.setNombreMat(resultSet.getString("Nombre_Mat"));
 
-                    docentes.add(docente);
-                    System.out.println(docente.getNombre_docente() + docente.getPrimerApellido_Docente());
+                docentesMaterias.add(docenteMateria);
 
-                }
-                resultSet.close();
-                preparedStatement.close();
-                conexion.close();
-
-
-            }catch(SQLException ex){
-                System.out.println(this.getClass().getCanonicalName() +"@"+ ex.getMessage());
             }
 
+            resultSet.close();
+            preparedStatement.close();
+            conexion.close();
 
-        return docentes;
+
+
+        }catch(SQLException ex){
+            System.out.println(this.getClass().getCanonicalName()  +"@"+ex.getMessage());
+        }
+
+
+
+
+        return docentesMaterias;
 
 
     }
 
-/*
-        public static void main(String[] args) {
-
-        DocenteDao docenteDao = new DocenteDao();
-
-        List<Docente> docentes = docenteDao.obtenerDocenteMateria(3);
-
-
-
-    }
-
- */
 }

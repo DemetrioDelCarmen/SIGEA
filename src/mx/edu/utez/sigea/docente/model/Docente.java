@@ -2,6 +2,8 @@ package mx.edu.utez.sigea.docente.model;
 
 public class Docente {
 
+
+
             private int id_Docente;
             private  String Nombre_docente;
             private String PrimerApellido_Docente;

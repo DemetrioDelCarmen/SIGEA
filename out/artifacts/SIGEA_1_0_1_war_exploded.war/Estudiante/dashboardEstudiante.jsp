@@ -23,7 +23,7 @@
     <script src="js/bootstrap.min.js" type="application/javascript"></script>
     <script src="js/index.js" type="application/javascript"></script>
     <script src="js/sweetalert.min.js"></script>
-    <script src="js/dbEstudiante.js"></script>
+    <script src="js/dbEstudiante.js" type="application/javascript"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styleR.css">
     <link rel="stylesheet" href="css/sweetalert.css">
@@ -115,7 +115,7 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="nombreMateriaModal">Cálculo diferencial</h5>
+                                <h5 class="modal-title" id="nombreMateriaModal"></h5>
 
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -127,9 +127,9 @@
 
                             <form>
                                 <div class="form-group">
-                                    <label for="docente">Docente</label>
+                                    <label for="docentes">Docente</label>
 
-                                    <select class="form-control" name="docente"id="docente">
+                                    <select class="form-control" name="docente"id="docentes">
                                         <option value="0">Selecciona un Docente</option>
                                     </select>
                                 </div>

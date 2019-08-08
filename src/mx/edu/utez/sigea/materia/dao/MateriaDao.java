@@ -1,5 +1,7 @@
 package mx.edu.utez.sigea.materia.dao;
 
+import mx.edu.utez.sigea.docente.model.Docente;
+import mx.edu.utez.sigea.docente.model.DocenteMateria;
 import mx.edu.utez.sigea.estudiante.model.Estudiante;
 import mx.edu.utez.sigea.materia.model.Materia;
 import mx.edu.utez.sigea.utility.Conexion;
@@ -48,7 +50,6 @@ public class MateriaDao implements IMateriaDao {
         }
         return materias;
     }
-
 
 
 

@@ -1,23 +1,109 @@
-let onReadyStudentProfile =()=>{
+let onReadyStudentProfile = () => {
 
     let cargaModal = (evt) => {
         let id;
-        if(!evt.target.getAttribute("value")){
+        if (!evt.target.getAttribute("value")) {
             id = evt.target.parentElement.getAttribute("value");
-        }else{
+        } else {
             id = evt.target.getAttribute("value");
         }
 
         console.log(id);
+
+        $.ajax({
+            url: "EstudianteServlet",
+            method: "POST",
+            data: {
+                idMateria: id,
+                accion: "cargarMateria"
+            }
+        }).done((response) => {
+
+            while (docente = document.querySelector("#docentes").lastChild){
+                document.querySelector("#docentes").removeChild(docente);
+            }
+            console.log(response);
+            let materia = JSON.parse(response);
+        //materia.setAttribute("charset=utf8");
+            console.log(materia);
+
+
+            for (let i in materia) {
+
+                $(".modal-title").html(materia[i].nombreMat);
+
+                //  document.getElementsByClassName("modal-title").innerHTML = materia[i].nombreMat;
+                let nombreDocente =
+                    document.createTextNode(materia[i].nombreDocente + " " +
+                        materia[i].primerApellidoDocente + " " + materia[i].segundoApellidoDocente);
+                let opcion = document.createElement("option");
+                opcion.value = materia[i].idDocente;
+                opcion.appendChild(nombreDocente);
+
+                document.querySelector("#docentes").appendChild(opcion);
+
+            }
+
+
+        }).fail(() => {
+            alert("No se pudo procesar la peticion");
+        });
+
+        // aqui se hace la peticion de docentes por el id de la materia que selecciona
+
+       /* let datos = {
+            idMat: id,
+            load: "loadDocByMat"
+        };
+
+        fetch("MateriaServlet", {
+            method: "POST",
+            body: JSON.stringify(datos)
+        })
+            .then(function (response) {
+            return response.json();
+
+        })
+            .then(function (json) {
+            json.forEach((element) => {
+                let nombreDocente =
+                    document.createTextNode(element.nombreDocente + " " +
+                        element.primerApellidoDocente + " " + segundoApellidoDocente);
+                let opcion = document.createElement("option");
+                opcion.value = element.idDocente;
+                opcion.appendChild(nombreDocente);
+
+                document.querySelector("#docentes").appendChild(opcion);
+            });
+
+        });
+
+
+        */
+
     }
+
+    let cargarDiasDocente =()=>{
+        let idDocente = document.querySelector("#docentes option").value;
+
+        $.ajax({
+            url: "DiasServlet",
+            method: "POST",
+            data:{
+                idDocente: idDocente,
+                accion: "loadDaysDoc"
+            }
+        }).done((response)=>{
+            console.log(response);
+        })
+    }
+
 
     let etiquetas = document.getElementsByClassName("materiaasesoria");
     for (let i = 0; i < etiquetas.length; i++) {
         let id = etiquetas[i].getAttribute("value");
         etiquetas[i].addEventListener("click", cargaModal);
     }
-
-
 
 
 //agregaparticipantes al modal de estudiante
@@ -73,7 +159,6 @@ let onReadyStudentProfile =()=>{
      */
 
 
-
     //borra filas de la tabla de participantes
     $(document).on('click', '.borrar', function (event) {
         event.preventDefault();
@@ -120,10 +205,6 @@ let onReadyStudentProfile =()=>{
         .addEventListener("click", validaAsesoria);
 
 
-
-
-
-
 }
 
-document.addEventListener("DOMContentLoaded",onReady);
+document.addEventListener("DOMContentLoaded", onReadyStudentProfile);

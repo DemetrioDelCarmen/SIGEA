@@ -30,6 +30,16 @@ let onReady = ()=>{
 
 
 
+    $("body").on("click", ".btnAsignar", function () {
+            let dataid = this.getAttribute("data-id");
+            let btnAsignar = this;
+
+
+
+    })
+
+
+
 
 }
 document.addEventListener("DOMContentLoaded",onReady);

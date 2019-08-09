@@ -9,6 +9,7 @@ import mx.edu.utez.sigea.materia.dao.MateriaDao;
 import mx.edu.utez.sigea.materia.model.Materia;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,6 +23,8 @@ import java.util.List;
  * Es requisito indispensable que se ponga la diagonal en el nombre del servlet para
  * *  entrar al servlet
  */
+@MultipartConfig
+
 @WebServlet(name = "EstudianteServlet", urlPatterns = "EstudianteServlet")
 public class EstudianteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -1,5 +1,7 @@
 package mx.edu.utez.sigea.docente.model;
 
+import java.time.LocalTime;
+
 public class DocenteAsesoria {
 
     private String nombreDocente;
@@ -7,6 +9,7 @@ public class DocenteAsesoria {
     private int id_Docente;
     private int asesoriasImpartidas;
     private String horario;
+
 
     public DocenteAsesoria(){
 

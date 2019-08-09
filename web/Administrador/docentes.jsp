@@ -22,11 +22,17 @@
     <script src="js/jquery-3.4.1.min.js" type="application/javascript"></script>
     <script src="js/bootstrap.min.js" type="application/javascript"></script>
     <script src="js/Administrador.js" type="application/javascript"></script>
-    <script src="js/sweetalert.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styleR.css">
-    <link rel="stylesheet" href="css/sweetalert.css">
     <link rel="stylesheet" href="css/docentes.css">
+
+
+    <!-- Sweet alert data -->
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="css/sweetalert.css">
+    <!-- End sweet alert data -->
+
 
 </head>
 <body>
@@ -121,6 +127,9 @@
                             </tbody>
                         </table>
                     </div>
+
+
+
                 </div>
     </div>
 

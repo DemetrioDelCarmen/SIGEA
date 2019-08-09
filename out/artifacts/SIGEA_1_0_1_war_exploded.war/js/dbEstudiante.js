@@ -8,6 +8,7 @@ let onReadyStudentProfile = () => {
             id = evt.target.getAttribute("value");
         }
 
+
         console.log(id);
 
         $.ajax({
@@ -19,18 +20,34 @@ let onReadyStudentProfile = () => {
             }
         }).done((response) => {
 
-            while (docente = document.querySelector("#docentes").lastChild){
+            while (docente = document.querySelector("#docentes").lastChild) {
                 document.querySelector("#docentes").removeChild(docente);
             }
+
             console.log(response);
             let materia = JSON.parse(response);
 
+
+
             console.log(materia);
+
+              let texto = document.createTextNode("Selecciona a un docente");
+              let opcion = document.createElement("option");
+              opcion.value = 0;
+              opcion.appendChild(texto);
+
+              document.querySelector("#docentes").appendChild(opcion);
+
+
+            $(".modal-title").html("");
 
 
             for (let i in materia) {
 
                 $(".modal-title").html(materia[i].nombreMat);
+
+
+
 
                 //  document.getElementsByClassName("modal-title").innerHTML = materia[i].nombreMat;
                 let nombreDocente =
@@ -51,41 +68,89 @@ let onReadyStudentProfile = () => {
 
         // aqui se hace la peticion de docentes por el id de la materia que selecciona
 
-       /* let datos = {
-            idMat: id,
-            load: "loadDocByMat"
-        };
+        /* let datos = {
+             idMat: id,
+             load: "loadDocByMat"
+         };
 
-        fetch("MateriaServlet", {
-            method: "POST",
-            body: JSON.stringify(datos)
-        })
-            .then(function (response) {
-            return response.json();
+         fetch("MateriaServlet", {
+             method: "POST",
+             body: JSON.stringify(datos)
+         })
+             .then(function (response) {
+             return response.json();
 
-        })
-            .then(function (json) {
-            json.forEach((element) => {
-                let nombreDocente =
-                    document.createTextNode(element.nombreDocente + " " +
-                        element.primerApellidoDocente + " " + segundoApellidoDocente);
-                let opcion = document.createElement("option");
-                opcion.value = element.idDocente;
-                opcion.appendChild(nombreDocente);
+         })
+             .then(function (json) {
+             json.forEach((element) => {
+                 let nombreDocente =
+                     document.createTextNode(element.nombreDocente + " " +
+                         element.primerApellidoDocente + " " + segundoApellidoDocente);
+                 let opcion = document.createElement("option");
+                 opcion.value = element.idDocente;
+                 opcion.appendChild(nombreDocente);
 
-                document.querySelector("#docentes").appendChild(opcion);
-            });
+                 document.querySelector("#docentes").appendChild(opcion);
+             });
 
-        });
+         });
 
 
-        */
+         */
 
     }
+
+    let cargarDiasDocente = () => {
+        let idDocente = document.querySelector("#docentes").value;
+
+        $.ajax({
+            url: "DiasServlet",
+            method: "POST",
+            data: {
+                idDocente: idDocente,
+                accion: "loadDaysDoc"
+            }
+        }).done((response) => {
+            console.log(response);
+            let dias = JSON.parse(response);
+
+
+            while (dia = document.querySelector("#dia").lastChild) {
+                document.querySelector("#dia").removeChild(dia);
+            }
+
+
+            let texto = document.createTextNode("Selecciona un día");
+            let opcion = document.createElement("option");
+            opcion.value = 0;
+            opcion.appendChild(texto);
+
+            document.querySelector("#dia").appendChild(opcion);
+
+
+            for (let i in dias) {
+
+                let nombreDia = document.createTextNode(dias[i].dia_dia);
+                let opcion = document.createElement("option");
+                opcion.value = dias[i].id_dia;
+
+                opcion.appendChild(nombreDia);
+
+                document.querySelector("#dia").appendChild(opcion);
+
+            }
+
+        }).fail(() => {
+            alert("No se pudieron traer los días");
+        })
+    }
+
 
     let etiquetas = document.getElementsByClassName("materiaasesoria");
     for (let i = 0; i < etiquetas.length; i++) {
         let id = etiquetas[i].getAttribute("value");
+
+
         etiquetas[i].addEventListener("click", cargaModal);
     }
 
@@ -187,7 +252,7 @@ let onReadyStudentProfile = () => {
     }
     document.querySelector("#registrar")
         .addEventListener("click", validaAsesoria);
-
+    document.querySelector("#docentes").addEventListener("change", cargarDiasDocente);
 
 }
 

@@ -10,6 +10,8 @@
 <c:if test="${sessionScope.idEstudiante==null}">
     <c:redirect url="../iniciarSesion.jsp"></c:redirect>
 </c:if>
+
+
 <html>
 
 <head>
@@ -123,94 +125,97 @@
                             </div>
 
 
-                        <div class="modal-body">
+                            <div class="modal-body">
 
-                            <form>
-                                <div class="form-group">
-                                    <label for="docentes">Docente</label>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="docentes">Docente</label>
 
-                                    <select class="form-control" name="docente"id="docentes">
-                                        <option value="0">Selecciona un Docente</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
-
-                                    <label for="dia">Día para la asesoría</label>
-
-                                    <select class="form-control"  name="dia" id="dia">
-                                        <option value="0">Elige un día</option>
-                                    </select>
-
-                                    <label for="horario">Horario</label>
-
-                                    <select class="form-control"  name="horario" id="horario">
-                                        <option value="0">Selecciona un Horario</option>
-                                    </select>
-
-                                </div>
-
-
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Tema</span>
+                                        <select class="form-control" name="docente" id="docentes">
+                                            <option value="0">Selecciona un Docente</option>
+                                        </select>
                                     </div>
-                                    <input type="text" class="form-control" aria-label="Sizing example input"
-                                           aria-describedby="inputGroup-sizing-default"
-                                    placeholder="Ej. Javascript">
-                                </div>
 
+                                    <div class="form-group">
 
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">Comentario</span>
+                                        <label for="dia">Día para la asesoría</label>
+
+                                        <select class="form-control" name="dia" id="dia">
+                                            <option value="0">Elige un día</option>
+                                        </select>
+
+                                        <label for="horario">Horario</label>
+
+                                        <select class="form-control" name="horario" id="horario">
+                                            <option value="0">Selecciona un Horario</option>
+                                        </select>
+
                                     </div>
-                                    <input type="text"  class="form-control" aria-label="Sizing example input"
-                                           aria-describedby="inputGroup-sizing-default"
-                                           placeholder="Ej. Funciones Lambda">
-                                </div>
-                            </form>
-                            <table id="tablaestudianteasesoria">
-                                <thead>
-                                <tr>
-                                    <th>Participantes</th>
-                                    <th>&nbsp;</th>
-                                    <th>Detalles</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <input type="text" class="form-control" id="participante"
-                                               onkeyup="myFunction(this)"/>
-                                    </td>
-                                    <td>
-                                        <input type="button" class="btn btn-success mx-1" value=" + "
-                                               id="agregar"/>
-                                    </td>
 
-                                    <td>
-                                        <input type="text" class="form-control" id="detallesParticipante">
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
+
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Tema</span>
+                                        </div>
+                                        <input type="text" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-default"
+                                               placeholder="Ej. Javascript">
+                                    </div>
+
+
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">Comentario</span>
+                                        </div>
+                                        <input type="text" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-default"
+                                               placeholder="Ej. Funciones Lambda">
+                                    </div>
+                                </form>
+                                <table id="tablaestudianteasesoria">
+                                    <thead>
+                                    <tr>
+                                        <th>Participantes</th>
+                                        <th>&nbsp;</th>
+                                        <th>Detalles</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="form-control" id="participante"
+                                                   onkeyup="myFunction(this)"/>
+                                        </td>
+                                        <td>
+                                            <input type="button" class="btn btn-success mx-1" value=" + "
+                                                   id="agregar"/>
+                                        </td>
+                                        <td>
+
+                                            <select class="custom-select" multiple id="participantes" name="participantes">
+
+                                            </select>
+                                        </td>
+
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-success" id="registrar">Registrar</button>
+                            </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-success" id="registrar">Registrar</button>
-                        </div>
+
                     </div>
-
                 </div>
+
+
             </div>
-
-
         </div>
+
+
     </div>
-
-
-</div>
 </div>
 
 </body>

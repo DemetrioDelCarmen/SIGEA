@@ -48,6 +48,8 @@ public class AdministradorDao implements IAdminDao {
 
         try {
 
+
+            //Bernardo Huicochea Naranjo	Integradora I	Lunes	07:00:00	08:00:00
             Connection conexion = new Conexion().obtenerConexion();
             PreparedStatement preparedStatement = conexion.prepareCall(sp_listadoAsesoriasDocente);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -60,7 +62,7 @@ public class AdministradorDao implements IAdminDao {
                 docenteAsesoria.setId_Docente(resultSet.getInt("id_Docente"));
                 docenteAsesoria.setNombreDocente(resultSet.getString("nombreDocente"));
                 docenteAsesoria.setNombre_Mat(resultSet.getString("Nombre_Mat"));
-                docenteAsesoria.setAsesoriasImpartidas(resultSet.getInt("asesoriasImpartidas"));
+                //docenteAsesoria.setAsesoriasImpartidas(resultSet.getInt("asesoriasImpartidas"));
                 docenteAsesoria.setHorario(resultSet.getString("horario"));
 
                 docentesAsesorias.add(docenteAsesoria);

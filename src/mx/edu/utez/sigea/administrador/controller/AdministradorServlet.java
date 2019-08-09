@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @MultipartConfig
@@ -32,9 +33,6 @@ public class AdministradorServlet extends HttpServlet {
 
         switch(accion){
             case "Estadistica":{
-
-
-
                 request.setAttribute("nombreDocente", docente.getNombre_docente());
                 request.setAttribute("primerApellidoDocente", docente.getPrimerApellido_Docente());
                 request.setAttribute("segundoApellidoDocente", docente.getSegundoApellido_Docente());
@@ -43,18 +41,9 @@ public class AdministradorServlet extends HttpServlet {
                 break;
             }
             case "ListarDocentes":{
-
-
-                /*
-                trabajando sobre modulo listarDocentes, para el admin,
-                 se requiere de un beanEspecializado para modelar el
-                 resultado de la consulta esperada, y esa mostrarla en la tabla
-
-                 */
-
-
                 List<DocenteAsesoria> listadoDocentes = administradorDao.obtenerDocentes();
                 request.setAttribute("listadoDocentes", listadoDocentes);
+                List holas = new ArrayList();
 
                 request.setAttribute("nombreDocente", docente.getNombre_docente());
                 request.setAttribute("primerApellidoDocente", docente.getPrimerApellido_Docente());

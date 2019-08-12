@@ -1,13 +1,14 @@
 package mx.edu.utez.sigea.docente.model;
 
 public class DocenteMateria {
-    private  int idDocente;
-    private  String nombreDocente;
+    private int idDocente;
+    private String nombreDocente;
     private String primerApellidoDocente;
     private String segundoApellidoDocente;
     private String nombreMat;
 
-    public DocenteMateria(){}
+    public DocenteMateria() {
+    }
 
 
     public DocenteMateria(int idDocente, String nombreDocente, String primerApellidoDocente, String segundoApellidoDocente, String nombreMat) {

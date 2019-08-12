@@ -7,18 +7,19 @@ public class HOficial {
     private int id_HOficial;
     private int docente_id_docente;
     private int dia_id_dia;
-    private LocalTime horaInicio;
-    private LocalTime horaFin;
+    private String horaInicio;
+    private String horaFin;
 
     public HOficial () {}
 
-    public HOficial(int id_HOficial, int docente_id_docente, int dia_id_dia, LocalTime horaInicio, LocalTime horaFin) {
+    public HOficial(int id_HOficial, int docente_id_docente, int dia_id_dia, String horaInicio, String horaFin) {
         this.id_HOficial = id_HOficial;
         this.docente_id_docente = docente_id_docente;
         this.dia_id_dia = dia_id_dia;
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;
     }
+
 
     public int getId_HOficial() {
         return id_HOficial;
@@ -44,22 +45,21 @@ public class HOficial {
         this.dia_id_dia = dia_id_dia;
     }
 
-    public LocalTime getHoraInicio() {
+    public String getHoraInicio() {
         return horaInicio;
     }
 
-    public void setHoraInicio(LocalTime horaInicio) {
+    public void setHoraInicio(String horaInicio) {
         this.horaInicio = horaInicio;
     }
 
-    public LocalTime getHoraFin() {
+    public String getHoraFin() {
         return horaFin;
     }
 
-    public void setHoraFin(LocalTime horaFin) {
+    public void setHoraFin(String horaFin) {
         this.horaFin = horaFin;
     }
-
 
     @Override
     public String toString() {
@@ -67,8 +67,8 @@ public class HOficial {
                 "id_HOficial=" + id_HOficial +
                 ", docente_id_docente=" + docente_id_docente +
                 ", dia_id_dia=" + dia_id_dia +
-                ", horaInicio=" + horaInicio +
-                ", horaFin=" + horaFin +
+                ", horaInicio='" + horaInicio + '\'' +
+                ", horaFin='" + horaFin + '\'' +
                 '}';
     }
 }

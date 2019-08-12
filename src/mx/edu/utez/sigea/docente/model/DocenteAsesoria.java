@@ -8,6 +8,7 @@ public class DocenteAsesoria {
     private String Nombre_Mat;
     private int id_Docente;
     private int asesoriasImpartidas;
+    private String dia;
     private String horario;
 
 
@@ -21,6 +22,7 @@ public class DocenteAsesoria {
         this.id_Docente = id_Docente;
         this.asesoriasImpartidas = asesoriasImpartidas;
         this.horario = horario;
+        this.dia = dia;
     }
 
     public String getNombreDocente() {
@@ -63,6 +65,14 @@ public class DocenteAsesoria {
         this.horario = horario;
     }
 
+    public String getDia() {
+        return dia;
+    }
+
+    public void setDia(String dia) {
+        this.dia = dia;
+    }
+
     @Override
     public String toString() {
         return "DocenteAsesoria{" +
@@ -70,6 +80,7 @@ public class DocenteAsesoria {
                 ", Nombre_Mat='" + Nombre_Mat + '\'' +
                 ", id_Docente=" + id_Docente +
                 ", asesoriasImpartidas=" + asesoriasImpartidas +
+                ", dia='" + dia + '\'' +
                 ", horario='" + horario + '\'' +
                 '}';
     }

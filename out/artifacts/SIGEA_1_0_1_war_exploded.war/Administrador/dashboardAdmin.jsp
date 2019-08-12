@@ -44,7 +44,7 @@
             </div>
             <div class="col-1"></div>
             <div class="col-8 mt-2">
-                <h4>ESTADISTICAS para ${nombreDocente}</h4>
+                <h4>ESTADISTICAS</h4>
             </div>
         </div>
 
@@ -61,8 +61,13 @@
                     <img src="resources/IMG/estadistica.png" alt="" class="iclog"/>ESTADISTICAS</li>
             </div>
             <div id="docente">
-                <li style="cursor:pointer;"><img src="resources/IMG/docentes.png" alt="" class="iclog"/>DOCENTES</li>
+                <li style="cursor:pointer;"><img src="resources/IMG/docentes.png" alt="" class="iclog"/>DOCENTES ACTIVOS</li>
             </div>
+
+            <div id="docentesGenerales">
+                <li style="cursor:pointer;"><img src="resources/IMG/educator-with-eyeglasses.png" alt="" class="iclog"/>DOCENTES</li>
+            </div>
+
             <form id="nav">
                 <input type="hidden" name="accion"/>
             </form>

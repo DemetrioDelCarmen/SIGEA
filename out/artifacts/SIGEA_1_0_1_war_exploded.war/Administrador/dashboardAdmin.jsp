@@ -65,7 +65,7 @@
             </div>
 
             <div id="docentesGenerales">
-                <li style="cursor:pointer;"><img src="resources/IMG/educator-with-eyeglasses.png" alt="" class="iclog"/>DOCENTES</li>
+                <li style="cursor:pointer;"><img src="resources/IMG/desk.png" alt="" class="iclog"/>DOCENTES</li>
             </div>
 
             <form id="nav">

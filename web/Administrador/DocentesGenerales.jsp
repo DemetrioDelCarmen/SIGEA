@@ -70,6 +70,10 @@
             <div id="docente">
                 <li style="cursor:pointer;"><img src="resources/IMG/docentes.png" alt="" class="iclog"/>DOCENTES</li>
             </div>
+            <div id="docentesGenerales">
+                <li style="cursor:pointer;"><img src="resources/IMG/desk.png" alt="" class="iclog"/>DOCENTES</li>
+            </div>
+
             <form id="nav">
                 <input type="hidden" name="accion"/>
             </form>
@@ -125,10 +129,6 @@
                                         data-toggle="modal"
                                         data-target="#modalAsignar">
                                     Asignar
-                                </button>
-                                <button class="btn btn-danger btn-sm btnEliminar"
-                                        data-id="${dg_materias.idDocente}">
-                                    Eliminar
                                 </button>
                             </td>
                         </tr>
@@ -195,10 +195,6 @@
                         </div>
 
                         <input type="hidden" value="" name="idDocente" id="idDocente">
-
-
-
-
                 </form>
                 </div>
                 <div class="modal-footer">

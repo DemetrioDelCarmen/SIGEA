@@ -97,7 +97,7 @@ let onReady = () => {
                contentType: false,
                data: datos
            }).done((response) => {
-               if (response == true) {
+               if (response == "true") {
 
                    const Toast = Swal.mixin({
                        toast: true,
@@ -145,49 +145,7 @@ let onReady = () => {
                    title: 'No pudo ser procesada tu solicitud.'
                });
 
-           }).always(() => {
-
-               $.ajax({
-                   url: "AdministradorServlet",
-                   method: "POST",
-                   data: {
-                       accion: "asignarHorario",
-                   }
-
-               }).done((response) => {
-                   let tbody = document.querySelector("table tbody");
-
-                   while (hjijo = tbody.lastChild) {
-                       tbody.removeChild(hijo);
-                   }
-
-
-                   let arreglo = JSON.parse(response);
-
-                   console.log(arreglo);
-
-                   /*
-                   for(let i in arreglo){
-
-                       let fila = document.createElement("tr");
-                   // nombre / materias / acciones
-                       let cNombre = document.createElement("td");
-                       let cMaterias = document.createElement("td");
-                       let cAcciones = document.createElement("td");
-
-
-                       // textos que iran dentro de las celdas
-
-                       let txtNombre = document.createTextNode()
-
-                   }
-
-                    */
-
-               })
-
-
-           })
+           });
 
 
        });

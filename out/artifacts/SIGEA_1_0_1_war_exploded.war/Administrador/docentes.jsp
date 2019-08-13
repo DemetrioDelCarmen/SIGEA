@@ -70,6 +70,11 @@
             <div id="docente">
                 <li style="cursor:pointer;"><img src="resources/IMG/docentes.png" alt="" class="iclog"/>DOCENTES</li>
             </div>
+
+            <div id="docentesGenerales">
+                <li style="cursor:pointer;"><img src="resources/IMG/desk.png" alt="" class="iclog"/>DOCENTES</li>
+            </div>
+
             <form id="nav">
                 <input type="hidden" name="accion"/>
             </form>
@@ -92,8 +97,17 @@
                 <h2>Docentes</h2>
             </div>
 
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Buscar</span>
+                </div>
+                <input type="text" id="buscadorDocente" class="form-control" placeholder="Ej. Bernardo"
+                       aria-describedby="basic-addon1">
+            </div>
+
+
             <div class="col-10 col-sm-10">
-                <table class="table  tListadoDocentes">
+                <table class="table  tListadoDocentes" id="tablaDocentesGenerales">
                     <thead class="th_listadoDocentes">
                     <tr>
                         <th>Nombre</th>
@@ -101,6 +115,7 @@
                         <th>Asesorías Realizadas</th>
                         <th>Día</th>
                         <th>Horario</th>
+                        <th>Acciones</th>
                     </tr>
                     </thead>
                     <tbody class="tb_listadoDocentes">
@@ -112,6 +127,12 @@
                             <td class="tb_listadoDocentes">${dc_materias.asesoriasImpartidas}</td>
                             <td class="tb_listadoDocentes">${dc_materias.dia}</td>
                             <td class="tb_listadoDocentes">${dc_materias.horario}</td>
+                            <td class="tb_listadoDocentes">
+                                <button class="btn btn-warning btnEliminar  btn-sm"
+                                data-id="${dc_materias.id_Docente}">
+                                Deshabilitar
+                                </button>
+                            </td>
                         </tr>
                     </c:forEach>
                     </tbody>

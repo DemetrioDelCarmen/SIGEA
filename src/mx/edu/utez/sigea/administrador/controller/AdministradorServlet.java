@@ -73,7 +73,6 @@ public class AdministradorServlet extends HttpServlet {
             }
 
             case "asignarHorario": {
-
                 int idDocente = Integer.parseInt(request.getParameter("idDocente"));
                 int idDia = Integer.parseInt(request.getParameter("dia"));
                 String horaInicio = request.getParameter("horaInicio");
@@ -85,8 +84,14 @@ public class AdministradorServlet extends HttpServlet {
 
                 hof.setDocente_id_docente(idDocente);
                 hof.setDia_id_dia(idDia);
-                hof.setHoraFin(horaInicio);
+                hof.setHoraInicio(horaInicio);
                 hof.setHoraFin(horaFin);
+
+
+                System.out.println(hof.getDocente_id_docente());
+                System.out.println(hof.getDia_id_dia());
+                System.out.println(hof.getHoraInicio());
+                System.out.println(hof.getHoraFin());
 
                 AdministradorDao adminDao = new AdministradorDao();
 
@@ -97,7 +102,7 @@ public class AdministradorServlet extends HttpServlet {
                 else
                     out.print("false");
 
-
+                System.out.println("llegue aca");
                 break;
 
 

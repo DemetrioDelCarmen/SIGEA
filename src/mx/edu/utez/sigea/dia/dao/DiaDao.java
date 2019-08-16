@@ -13,7 +13,7 @@ import java.util.List;
 
 public class DiaDao implements IDiaDao {
     @Override
-    public List<Dia> obtenerDiasHorarioDocente(int idDia) {
+    public List<Dia> obtenerDiasHorarioDocente(int idDocente) {
         List<Dia> listadoDias = new ArrayList<>();
 
         String sp_consultarDiasDocente = "CALL sp_consultarDiasDocente(?)";
@@ -21,14 +21,14 @@ public class DiaDao implements IDiaDao {
         try {
             Connection conexion = new Conexion().obtenerConexion();
             PreparedStatement preparedStatement = conexion.prepareCall(sp_consultarDiasDocente);
-            preparedStatement.setInt(1,idDia);
+            preparedStatement.setInt(1,idDocente);
             ResultSet resultSet = preparedStatement.executeQuery();
             Dia dia;
             while (resultSet.next()){
                 dia  = new Dia();
 
-                dia.setId_dia(idDia);
-                dia.setDia_dia(resultSet.getString("dias"));
+                dia.setId_dia(resultSet.getInt("idDia"));
+                dia.setDia_dia(resultSet.getString("dia"));
                 listadoDias.add(dia);
             }
 

@@ -5,6 +5,7 @@ import mx.edu.utez.sigea.docente.dao.DocenteDao;
 import mx.edu.utez.sigea.docente.model.DocenteMateria;
 import mx.edu.utez.sigea.estudiante.dao.EstudianteDao;
 import mx.edu.utez.sigea.estudiante.model.Estudiante;
+import mx.edu.utez.sigea.estudiante.model.EstudianteMatricula;
 import mx.edu.utez.sigea.materia.dao.MateriaDao;
 import mx.edu.utez.sigea.materia.model.Materia;
 
@@ -24,7 +25,6 @@ import java.util.List;
  * *  entrar al servlet
  */
 @MultipartConfig
-
 @WebServlet(name = "EstudianteServlet", urlPatterns = "EstudianteServlet")
 public class EstudianteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -52,6 +52,50 @@ public class EstudianteServlet extends HttpServlet {
 
 
                 }
+
+                break;
+            }
+
+            case "recuperarEstudiante":{
+                String matricula = request.getParameter("matricula");
+                EstudianteDao estudianteDao = new EstudianteDao();
+
+                EstudianteMatricula estudiante = estudianteDao.recuperarEstudianteByMatricula(matricula);
+                PrintWriter out = response.getWriter();
+                if(estudiante!=null){
+
+                    Gson gson = new Gson();
+
+
+                    out.print(gson.toJson(estudiante));
+                }else{
+                    System.out.println("vacio");
+                }
+
+
+
+
+                break;
+
+
+
+            }
+
+            case "registrarAsesoria":{
+
+                    int idDocente = Integer.parseInt(request.getParameter("docente"));
+                    int idDia = Integer.parseInt(request.getParameter("dia"));
+                    int idHorario = Integer.parseInt(request.getParameter("horario"));
+                    String tema = request.getParameter("tema");
+                    String comentario  = request.getParameter("comentario");
+                    String [] estudiantes = request.getParameterValues("participantes");
+
+                for(String idEstudiante : estudiantes)
+                    System.out.println(idEstudiante);
+
+                //por cada idEstudiante voy a hacer una insercion en asesoria
+                
+
 
                 break;
             }

@@ -28,15 +28,14 @@ let onReadyStudentProfile = () => {
             let materia = JSON.parse(response);
 
 
-
             console.log(materia);
 
-              let texto = document.createTextNode("Selecciona a un docente");
-              let opcion = document.createElement("option");
-              opcion.value = 0;
-              opcion.appendChild(texto);
+            let texto = document.createTextNode("Selecciona a un docente");
+            let opcion = document.createElement("option");
+            opcion.value = 0;
+            opcion.appendChild(texto);
 
-              document.querySelector("#docentes").appendChild(opcion);
+            document.querySelector("#docentes").appendChild(opcion);
 
 
             $(".modal-title").html("");
@@ -45,8 +44,6 @@ let onReadyStudentProfile = () => {
             for (let i in materia) {
 
                 $(".modal-title").html(materia[i].nombreMat);
-
-
 
 
                 //  document.getElementsByClassName("modal-title").innerHTML = materia[i].nombreMat;
@@ -66,7 +63,7 @@ let onReadyStudentProfile = () => {
             alert("No se pudo procesar la peticion");
         });
 
-        // aqui se hace la peticion de docentes por el id de la materia que selecciona
+        // FETCH aqui se hace la peticion de docentes por el id de la materia que selecciona
 
         /* let datos = {
              idMat: id,
@@ -146,6 +143,54 @@ let onReadyStudentProfile = () => {
     }
 
 
+    let cargarHoraDia = () => {
+        let idDocente = document.querySelector("#docentes").value;
+        let idDia = document.querySelector("#dia").value;
+
+        $.ajax({
+            url: "HoficialServlet",
+            method: "POST",
+            data: {
+                accion: "obtenerHora",
+                idDocente: idDocente,
+                idDia: idDia
+            }
+        }).done((response) => {
+            console.log(response);
+
+            let horas = JSON.parse(response);
+
+            while (hora = document.querySelector("#horario").lastChild) {
+                document.querySelector("#horario").removeChild(hora);
+            }
+
+            let opcion = document.createElement("option");
+            opcion.value = 0;
+            let texto = document.createTextNode("Selecciona una hora");
+
+            opcion.appendChild(texto);
+
+            document.querySelector("#horario").appendChild(opcion);
+
+            for (let i in horas) {
+
+                let textoHora = document.createTextNode(horas[i].horaAsesoria);
+                let opcion = document.createElement("option");
+                opcion.appendChild(textoHora);
+                opcion.value = horas[i].idHorario;
+
+                document.querySelector("#horario").appendChild(opcion);
+
+
+            }
+
+
+        })
+
+
+    }
+
+
     let etiquetas = document.getElementsByClassName("materiaasesoria");
     for (let i = 0; i < etiquetas.length; i++) {
         let id = etiquetas[i].getAttribute("value");
@@ -157,42 +202,56 @@ let onReadyStudentProfile = () => {
 
 //agregaparticipantes al modal de estudiante
     let agrega = () => {
-        //1. Recuperar los valores de los controlas y
+        //1. Recuperar los valores de los controles y
         //almacenarlos en variables
         let participante = document.querySelector("#participante").value;
 
+
         if (participante != "") {
-            //2. mandarrlos a la tabla
-            //2.1 Crear la fila
-            let fila = document.createElement("tr");
-            //2.2 Crear las columnas
-            let columna1 = document.createElement("td");
-            let columna2 = document.createElement("td");
-            //crea los elementos
-            let nuevoparticipante = document.createElement("input");
-            nuevoparticipante.type = "text";
-            nuevoparticipante.setAttribute("value", participante);
-            nuevoparticipante.setAttribute("id", "nuevoparticipante");
-            nuevoparticipante.className = "form-control my-1";
+            $.ajax({
+                url: "EstudianteServlet",
+                method: "POST",
+                data: {
+                    matricula: participante,
+                    accion: "recuperarEstudiante",
+                }
 
-            let eliminar = document.createElement("input");
-            eliminar.type = "button";
-            eliminar.className = "btn btn-danger m-1 borrar";
-            eliminar.setAttribute("id", "eliminar");
-            eliminar.setAttribute("value", " x ");
+            }).done((response) => {
 
-            //2.3 Asignar la fila a la tabla
-            columna1.appendChild(nuevoparticipante);
-            columna2.appendChild(eliminar);
+                let estudiante = JSON.parse(response);
+
+                if (estudiante.idEstudiante ==0) {
 
 
-            fila.appendChild(columna1);
-            fila.appendChild(columna2);
 
-            //2.4 Agregar la fila a la tabla
-            document.querySelector("#tablaestudianteasesoria").appendChild(fila);
-            document.querySelector("#participante").value = "";
+                    swal({
+                        toast: true,
+                        position: 'top-end',
+                        showConfirmButton: false,
+                        timer: 1500,
+                        background: "#FADBD8",
+                        type: 'error',
+                        title: 'ERROR',
+                        text: 'Matricula no valida',
+                    })
 
+                }else{
+                    let areaNombre  = document.querySelector("#participantes");
+
+                    let nombreEstudiante = document.createTextNode(estudiante.nombre);
+                    let opcion = document.createElement("option");
+                    opcion.value = estudiante.idEstudiante;
+                    opcion.appendChild(nombreEstudiante);
+                    areaNombre.appendChild(opcion);
+
+                    document.querySelector("#participante").value = "";
+
+
+
+
+
+                }
+            })
         } else {
             swal({
                 type: 'error',
@@ -201,12 +260,6 @@ let onReadyStudentProfile = () => {
             })
         }
     }
-    /*  document.querySelector("#agregar")
-        .addEventListener("click",agrega);
-
-
-     */
-
 
     //borra filas de la tabla de participantes
     $(document).on('click', '.borrar', function (event) {
@@ -217,42 +270,42 @@ let onReadyStudentProfile = () => {
 
 //valida la asesoria
 
-    let validaAsesoria = () => {
-        if (!document.getElementById('nuevoparticipante')) {
-            swal({
-                type: 'error',
-                title: 'ERROR',
-                text: 'Revisa que los campos esten completos',
+
+
+
+    let registrarAsesoria =()=>{
+
+            let formulario = document.querySelector("#formularioAsesoria");
+
+            let datos = new FormData(formulario);
+            datos.append("accion","registrarAsesoria");
+
+
+            $.ajax({
+
+                url: "EstudianteServlet",
+                method: "POST",
+                data:datos,
+                processData: false,
+                contentType: false
+
+            }).done((response)=>{
+                console.log(response);
             })
-        } else {
-            let participante = document.querySelector("#nuevoparticipante").value;
-            let docente = document.querySelector("#docente").value;
-            let horario = document.querySelector("#horario").value;
-
-            if (participante != '' && docente >= 1 && horario >= 1) {
-                swal({
-                    type: 'success',
-                    title: 'HECHO',
-                    text: 'Asesoria registrada exitosamente',
-                })
-                document.querySelector("form").reset();
-                document.getElementById('myModal').reset();
-
-                /*  document.querySelector("registrar").setAttribute('data-dismiss','modal'); */
-
-            } else {
-                swal({
-                    type: 'error',
-                    title: 'ERROR',
-                    text: 'Revisa que los campos esten completos',
-                })
-            }
-        }
 
     }
+
+
+
+    document.querySelector("#docentes")
+        .addEventListener("change", cargarDiasDocente);
+    document.querySelector("#dia")
+        .addEventListener("change", cargarHoraDia);
     document.querySelector("#registrar")
-        .addEventListener("click", validaAsesoria);
-    document.querySelector("#docentes").addEventListener("change", cargarDiasDocente);
+        .addEventListener("click", registrarAsesoria);
+
+    document.querySelector("#agregar")
+        .addEventListener("click", agrega);
 
 }
 

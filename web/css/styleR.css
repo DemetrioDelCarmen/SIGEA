@@ -222,3 +222,16 @@ a:focus{
     font-size: 30px;
 
 }
+#sec1{
+	width: 50%;
+	float: left;
+}
+#sec2{
+	padding-left: 10px;
+	width: 50%;
+	float: left;
+
+}
+#anchoModal{
+	width: 100% !important;
+}

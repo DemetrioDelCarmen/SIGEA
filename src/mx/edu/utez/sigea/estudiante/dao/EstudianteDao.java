@@ -1,6 +1,7 @@
 package mx.edu.utez.sigea.estudiante.dao;
 
 import mx.edu.utez.sigea.estudiante.model.Estudiante;
+import mx.edu.utez.sigea.estudiante.model.EstudianteMatricula;
 import mx.edu.utez.sigea.materia.dao.MateriaDao;
 import mx.edu.utez.sigea.materia.model.Materia;
 import mx.edu.utez.sigea.utility.Conexion;
@@ -42,31 +43,40 @@ public class EstudianteDao implements IEstudianteDao {
         return estudiante;
     }
 
-      /*  public static void main(String[] args) {
-        EstudianteDao estudianteDao = new EstudianteDao();
-        //int idEstudiante =1;
+    @Override
+    public EstudianteMatricula recuperarEstudianteByMatricula(String matricula) {
 
-        Estudiante estudiante = new Estudiante();
-        estudiante.setId_estudiante(11);
-        estudiante = estudianteDao.obtenerEstudiante(estudiante);
+        String sp_loadStudentByMatricula = "CALL sp_loadStudentByMatricula(?);";
+        EstudianteMatricula estudiante = new EstudianteMatricula();
+        try {
 
-        System.out.println("id del estudiante  = "+ estudiante.getId_estudiante());
-        System.out.println(estudiante.getNombre_estudiante() +" "+ estudiante.getPrimerApellido_estudiante()
-        +" "+ estudiante.getSegundoApellido_estudiante());
-
-            System.out.println("carrera id"  +estudiante.getIdCarrera());
+            Connection conexion = new Conexion().obtenerConexion();
+            PreparedStatement preparedStatement = conexion.prepareCall(sp_loadStudentByMatricula);
+            preparedStatement.setString(1,matricula);
 
 
-            MateriaDao materiaDao = new MateriaDao();
-            List<Materia> materias = materiaDao.listarMaterias(3);
+            ResultSet resultSet=  preparedStatement.executeQuery();
+            resultSet.next();
 
-            for (Materia lts : materias){
-                System.out.println("--> "+materias);
-            }
+
+
+            estudiante.setIdEstudiante(resultSet.getInt("id_estudiante"));
+            estudiante.setNombre(resultSet.getString("nombre"));
+            estudiante.setIdCarrera(resultSet.getInt("idCarrera"));
+            estudiante.setIdGenero(resultSet.getInt("idGenero"));
+
+
+
+        }catch (SQLException ex){
+            System.out.println(this.getClass().getCanonicalName() +"@"+ ex.getMessage());
+        }
+
+        return estudiante;
     }
 
 
-       */
+
+
 
 
 

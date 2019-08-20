@@ -64,6 +64,7 @@ public class EstudianteDao implements IEstudianteDao {
             estudiante.setNombre(resultSet.getString("nombre"));
             estudiante.setIdCarrera(resultSet.getInt("idCarrera"));
             estudiante.setIdGenero(resultSet.getInt("idGenero"));
+            estudiante.setIdGrupo(resultSet.getInt("grupo"));
 
 
 

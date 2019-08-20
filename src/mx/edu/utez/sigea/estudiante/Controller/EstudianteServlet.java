@@ -90,11 +90,13 @@ public class EstudianteServlet extends HttpServlet {
                     String comentario  = request.getParameter("comentario");
                     String [] estudiantes = request.getParameterValues("participantes");
 
-                for(String idEstudiante : estudiantes)
-                    System.out.println(idEstudiante);
+                for(String idEstudiante : estudiantes) {
+                    //por cada idEstudiante voy a hacer una insercion en asesoria
 
-                //por cada idEstudiante voy a hacer una insercion en asesoria
-                
+
+
+                }
+
 
 
                 break;

@@ -3,16 +3,17 @@ package mx.edu.utez.sigea.estudiante.model;
 public class EstudianteMatricula {
 
 
-    private int idEstudiante,idCarrera,idGenero;
+    private int idEstudiante,idCarrera,idGenero, idGrupo;
     private  String nombre, matricula;
 
 
     public EstudianteMatricula(){}
 
-    public EstudianteMatricula(int idEstudiante, int idCarrera, int idGenero, String nombre, String matricula) {
+    public EstudianteMatricula(int idEstudiante, int idCarrera, int idGenero, int idGrupo, String nombre, String matricula) {
         this.idEstudiante = idEstudiante;
         this.idCarrera = idCarrera;
         this.idGenero = idGenero;
+        this.idGrupo = idGrupo;
         this.nombre = nombre;
         this.matricula = matricula;
     }
@@ -41,6 +42,14 @@ public class EstudianteMatricula {
         this.idGenero = idGenero;
     }
 
+    public int getIdGrupo() {
+        return idGrupo;
+    }
+
+    public void setIdGrupo(int idGrupo) {
+        this.idGrupo = idGrupo;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -57,12 +66,14 @@ public class EstudianteMatricula {
         this.matricula = matricula;
     }
 
+
     @Override
     public String toString() {
         return "EstudianteMatricula{" +
                 "idEstudiante=" + idEstudiante +
                 ", idCarrera=" + idCarrera +
                 ", idGenero=" + idGenero +
+                ", idGrupo=" + idGrupo +
                 ", nombre='" + nombre + '\'' +
                 ", matricula='" + matricula + '\'' +
                 '}';

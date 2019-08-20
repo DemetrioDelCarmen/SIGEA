@@ -1,5 +1,39 @@
 let onReadyStudentProfile = () => {
 
+    $("#estadistica").click((evt) => {
+        $("#nav input").val("Estadistica");
+        $("#nav").attr("action", "AdministradorServlet");
+        $("#nav").attr("method", "POST");
+        $("#nav").submit();
+    });
+
+    $("#docente").click((evt) => {
+        $("#nav input").val("ListarDocentes");
+        $("#nav").attr("action", "AdministradorServlet");
+        $("#nav").attr("method", "POST");
+        $("#nav").submit();
+    });
+
+    $("#docentesGenerales").click((evt) => {
+        $("#nav input").val("DocentesGenerales");
+        $("#nav").attr("action", "AdministradorServlet");
+        $("#nav").attr("method", "POST");
+        $("#nav").submit();
+    });
+
+
+// sidebar toggle
+    const btnToggle = document.querySelector('#sidebarCollapse');
+
+    btnToggle.addEventListener('click', function () {
+
+        document.getElementById('sidebar').classList.toggle('active');
+
+        document.getElementById('content').classList.toggle('active');
+    });
+
+
+
     let cargaModal = (evt) => {
         let id;
         if (!evt.target.getAttribute("value")) {
@@ -7,6 +41,8 @@ let onReadyStudentProfile = () => {
         } else {
             id = evt.target.getAttribute("value");
         }
+
+
 
 
         console.log(id);
@@ -224,15 +260,17 @@ let onReadyStudentProfile = () => {
 
 
 
-                    swal({
+                    const Toast = Swal.mixin({
                         toast: true,
                         position: 'top-end',
                         showConfirmButton: false,
-                        timer: 1500,
-                        background: "#FADBD8",
+                        timer: 1500
+                    });
+
+                    Toast.fire({
                         type: 'error',
-                        title: 'ERROR',
-                        text: 'Matricula no valida',
+                        background: "#FADBD8",
+                        title: "Matrícula no válida"
                     })
 
                 }else{
@@ -288,7 +326,7 @@ let onReadyStudentProfile = () => {
                 data:datos,
                 processData: false,
                 contentType: false
-
+    
             }).done((response)=>{
                 console.log(response);
             })

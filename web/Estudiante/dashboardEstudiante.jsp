@@ -23,12 +23,15 @@
 
     <script src="js/jquery-3.4.1.min.js" type="application/javascript"></script>
     <script src="js/bootstrap.min.js" type="application/javascript"></script>
-    <script src="js/index.js" type="application/javascript"></script>
-    <script src="js/sweetalert.min.js"></script>
     <script src="js/dbEstudiante.js" type="application/javascript"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styleR.css">
+    <!--sweet alert -->
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="css/sweetalert.css">
+    <!--sweet alert -->
+
 </head>
 
 <body>
@@ -211,6 +214,7 @@
                                 </div>
                             </div>
 
+                            <input type="hidden" name="idGrupo" value="" id="idGrupo">
                             </form>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>

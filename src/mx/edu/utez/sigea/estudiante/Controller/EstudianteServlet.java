@@ -139,6 +139,7 @@ public class EstudianteServlet extends HttpServlet {
 
 
                 request.setAttribute("nombre", estudiante.getNombre_estudiante());
+                request.setAttribute("idEstudiante",estudiante.getId_estudiante());
                 request.setAttribute("primerApellido", estudiante.getPrimerApellido_estudiante());
                 request.setAttribute("segundoApellido", estudiante.getSegundoApellido_estudiante());
                 request.setAttribute("genero", estudiante.getIdGenero());

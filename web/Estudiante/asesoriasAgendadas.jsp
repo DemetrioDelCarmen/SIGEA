@@ -128,7 +128,7 @@
                                         </td>
                                     </c:if>
                                     <td class="tb_listadoDocentes">
-                                        <button class="btn btn-danger btn-sm btnEliminar" id="btnCancelar">Cancelar</button>
+                                        <button class="btn btn-danger btn-sm btnEliminar" id="btnCancelar" value="${idEstudiante}" >Cancelar</button>
                                     </td>
                                     <td class="tb_listadoDocentes">${asesoria.participantes}</td>
                                 </tr>

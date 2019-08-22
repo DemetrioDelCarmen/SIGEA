@@ -2,10 +2,12 @@ package mx.edu.utez.sigea.estudiante.dao;
 
 import mx.edu.utez.sigea.estudiante.model.Estudiante;
 import mx.edu.utez.sigea.estudiante.model.EstudianteMatricula;
+import mx.edu.utez.sigea.estudiantegrupo.model.EstudianteGrupo;
 import mx.edu.utez.sigea.materia.dao.MateriaDao;
 import mx.edu.utez.sigea.materia.model.Materia;
 import mx.edu.utez.sigea.utility.Conexion;
 
+import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -66,6 +68,9 @@ public class EstudianteDao implements IEstudianteDao {
             estudiante.setIdGenero(resultSet.getInt("idGenero"));
             estudiante.setIdGrupo(resultSet.getInt("grupo"));
 
+            resultSet.close();
+            preparedStatement.close();
+            conexion.close();
 
 
         }catch (SQLException ex){
@@ -75,10 +80,33 @@ public class EstudianteDao implements IEstudianteDao {
         return estudiante;
     }
 
+    @Override
+    public EstudianteGrupo obtenerEstudianteById(int idEstudiante) {
+        EstudianteGrupo estudiante = new EstudianteGrupo();
+
+        String loadStudentById = "CALL loadStudentById(?);";
+        try{
+
+            Connection conexion = new  Conexion().obtenerConexion();
+            PreparedStatement preparedStatement = conexion.prepareCall(loadStudentById);
+            preparedStatement.setInt(1,idEstudiante);
+            ResultSet  resultSet = preparedStatement.executeQuery();
+            resultSet.next();
+
+            estudiante.setId_estudiante(idEstudiante);
+            estudiante.setGrupo_id_grupo(resultSet.getInt("grupo"));
 
 
+            resultSet.close();
+            preparedStatement.close();
+            conexion.close();
+        }catch (SQLException ex){
+            System.out.println(this.getClass().getCanonicalName() +"@"+ ex.getMessage());
+        }
 
 
+        return estudiante;
+    }
 
 
 }

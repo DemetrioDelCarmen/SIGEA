@@ -13,12 +13,12 @@ import java.util.List;
 
 public class HoficialDao implements IHoficialDao {
     @Override
-    public List<Hora> obtenerHoras(int idDocente, int idDia) {
+    public List<Hora> obtenerHoras(int idDocente) {
 
         List<Hora> horas = new ArrayList<>();
 
 
-        String sp_obtenerHoraAsesoria = "CALL sp_obtenerHoraAsesoria(?,?);";
+        String sp_obtenerHoraAsesoria = "CALL sp_obtenerHoraAsesoria(?);";
 
         try {
 
@@ -26,16 +26,13 @@ public class HoficialDao implements IHoficialDao {
             PreparedStatement preparedStatement = conexion.prepareCall(sp_obtenerHoraAsesoria);
 
             preparedStatement.setInt(1, idDocente);
-            preparedStatement.setInt(2, idDia);
-
             ResultSet resultSet = preparedStatement.executeQuery();
-
             Hora hora;
 
             while (resultSet.next()) {
                 hora = new Hora();
-
-                hora.setHoraAsesoria(resultSet.getString("hora"));
+                hora.setIdHorario(resultSet.getInt("id_HOficial"));
+                hora.setHoraAsesoria(resultSet.getString("horario"));
 
                 horas.add(hora);
 

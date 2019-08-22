@@ -1,25 +1,33 @@
 let onReadyStudentProfile = () => {
 
-    $("#estadistica").click((evt) => {
-        $("#nav input").val("Estadistica");
-        $("#nav").attr("action", "AdministradorServlet");
+    $("#asesorias").click((evt) => {
+        $("#nav input").val("Asesorias");
+        $("#nav").attr("action", "EstudianteServlet");
         $("#nav").attr("method", "POST");
         $("#nav").submit();
     });
 
-    $("#docente").click((evt) => {
-        $("#nav input").val("ListarDocentes");
-        $("#nav").attr("action", "AdministradorServlet");
+    $("#agendadas").click((evt) => {
+        $("#nav input").val("Agendadas");
+        $("#nav").attr("action", "EstudianteServlet");
         $("#nav").attr("method", "POST");
         $("#nav").submit();
     });
 
-    $("#docentesGenerales").click((evt) => {
-        $("#nav input").val("DocentesGenerales");
-        $("#nav").attr("action", "AdministradorServlet");
+    $("#concluidas").click((evt) => {
+        $("#nav input").val("Concluidas");
+        $("#nav").attr("action", "EstudianteServlet");
         $("#nav").attr("method", "POST");
         $("#nav").submit();
     });
+
+
+    $("#agendarasesoria").click(()=>{
+        $("#nav2 input").val("Asesorias");
+        $("#nav2").attr("action","EstudianteServlet");
+        $("#nav2").attr("method","POST");
+        $("#nav2").submit();
+    })
 
 
 // sidebar toggle
@@ -33,20 +41,27 @@ let onReadyStudentProfile = () => {
     });
 
 
-
     let cargaModal = (evt) => {
+
+
+        while (dia = document.querySelector("#dia").lastChild) {
+            document.querySelector("#dia").removeChild(dia);
+        }
+
         let id;
+
         if (!evt.target.getAttribute("value")) {
             id = evt.target.parentElement.getAttribute("value");
         } else {
             id = evt.target.getAttribute("value");
+
+
         }
 
 
 
-
         console.log(id);
-
+        document.querySelector("#idMateria").value = id;
         $.ajax({
             url: "EstudianteServlet",
             method: "POST",
@@ -133,6 +148,51 @@ let onReadyStudentProfile = () => {
 
     }
 
+    let cargarHorarios = () => {
+
+        let idDocente = document.querySelector("#docentes").value;
+        $.ajax({
+            url: "HoficialServlet",
+            method: "POST",
+            data: {
+                idDocente: idDocente,
+                accion: "obtenerHorario"
+            }
+        }).done((response) => {
+            let horario = JSON.parse(response);
+            console.log(horario);
+
+
+
+            let texto = document.createTextNode("Selecciona cuándo");
+            let opcion = document.createElement("option");
+            opcion.appendChild(texto);
+            opcion.value = 0;
+            document.querySelector("#dia").appendChild(opcion);
+
+
+            for (let i in horario) {
+                let textoHorario = document.createTextNode(horario[i].horaAsesoria);
+                let opcion = document.createElement("option");
+                opcion.value = horario[i].idHorario;
+                opcion.appendChild(textoHorario);
+                document.querySelector("#dia").appendChild(opcion);
+
+
+            }
+
+        })
+
+    }
+
+    let resetearFormulario =()=>{
+        let formulario =  document.querySelector("#formularioAsesoria");
+
+
+        formulario.reset();
+
+    }
+
     let cargarDiasDocente = () => {
         let idDocente = document.querySelector("#docentes").value;
 
@@ -181,15 +241,12 @@ let onReadyStudentProfile = () => {
 
     let cargarHoraDia = () => {
         let idDocente = document.querySelector("#docentes").value;
-        let idDia = document.querySelector("#dia").value;
-
         $.ajax({
             url: "HoficialServlet",
             method: "POST",
             data: {
-                accion: "obtenerHora",
+                accion: "obtenerHorario",
                 idDocente: idDocente,
-                idDia: idDia
             }
         }).done((response) => {
             console.log(response);
@@ -256,8 +313,7 @@ let onReadyStudentProfile = () => {
 
                 let estudiante = JSON.parse(response);
 
-                if (estudiante.idEstudiante ==0) {
-
+                if (estudiante.idEstudiante == 0) {
 
 
                     const Toast = Swal.mixin({
@@ -273,8 +329,8 @@ let onReadyStudentProfile = () => {
                         title: "Matrícula no válida"
                     })
 
-                }else{
-                    let areaNombre  = document.querySelector("#participantes");
+                } else {
+                    let areaNombre = document.querySelector("#participantes");
 
                     let nombreEstudiante = document.createTextNode(estudiante.nombre);
                     let opcion = document.createElement("option");
@@ -283,10 +339,6 @@ let onReadyStudentProfile = () => {
                     areaNombre.appendChild(opcion);
 
                     document.querySelector("#participante").value = "";
-
-
-
-
 
                 }
             })
@@ -309,41 +361,56 @@ let onReadyStudentProfile = () => {
 //valida la asesoria
 
 
+    let registrarAsesoria = () => {
+
+        let formulario = document.querySelector("#formularioAsesoria");
+
+        let datos = new FormData(formulario);
+        datos.append("accion", "registrarAsesoria");
 
 
-    let registrarAsesoria =()=>{
+        $.ajax({
 
-            let formulario = document.querySelector("#formularioAsesoria");
+            url: "EstudianteServlet",
+            method: "POST",
+            data: datos,
+            processData: false,
+            contentType: false
 
-            let datos = new FormData(formulario);
-            datos.append("accion","registrarAsesoria");
+        }).done((response) => {
+            console.log(response);
 
+            if(response=="true"){
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000
+                });
 
-            $.ajax({
+                Toast.fire({
+                    type: 'success',
+                    title: 'Asesoria registrada correctamente.'
+                });
 
-                url: "EstudianteServlet",
-                method: "POST",
-                data:datos,
-                processData: false,
-                contentType: false
-    
-            }).done((response)=>{
-                console.log(response);
-            })
+                formulario.reset();
+            }else{
+                alert("No se pudo registrar");
+            }
+        })
 
     }
 
 
-
     document.querySelector("#docentes")
-        .addEventListener("change", cargarDiasDocente);
-    document.querySelector("#dia")
-        .addEventListener("change", cargarHoraDia);
+        .addEventListener("change", cargarHorarios);
     document.querySelector("#registrar")
         .addEventListener("click", registrarAsesoria);
 
     document.querySelector("#agregar")
         .addEventListener("click", agrega);
+    document.querySelector("#cancelarRegistro")
+        .addEventListener("click",resetearFormulario);
 
 }
 

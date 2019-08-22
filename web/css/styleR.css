@@ -153,7 +153,7 @@ a:focus{
 }
 /*estilos de la pagina de asesorias agendadas*/
 .sinasesoria{
-	background-image: url('../IMG/iconos/beach.png');
+	background-image: url('../resources/IMG/SinFondo.png');
 	height: 500px;
 	width: 500px;
 	background-size:contain;
@@ -234,4 +234,47 @@ a:focus{
 }
 #anchoModal{
 	width: 100% !important;
+}
+
+
+
+.separador{
+	margin-bottom: 4rem;
+}
+
+.th_listadoDocentes{
+
+	background-color: #1A537A;
+	color: white;
+	height: 10px;
+
+}
+
+.tListadoDocentes{
+	text-align: center;
+}
+
+.btnAsignar{
+
+	align-self: center;
+	border-radius: 15px;
+	width: 80px;
+	height: 30px;
+	margin-right: 1em;
+
+}
+
+.btnEliminar{
+
+	align-self: center;
+	border-radius: 15px;
+	width: 80px;
+	height: 30px;
+	margin-right: 1em;
+
+}
+
+.tb_listadoDocentes{
+
+	border: .9px solid #ACACAC;
 }

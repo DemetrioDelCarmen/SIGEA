@@ -1,11 +1,15 @@
 package mx.edu.utez.sigea.estudiante.Controller;
 
 import com.google.gson.Gson;
+import mx.edu.utez.sigea.asesoria.dao.AsesoriaDao;
+import mx.edu.utez.sigea.asesoriaestudiante.dao.AsesoriaEstudianteDao;
+import mx.edu.utez.sigea.asesoriaestudiante.model.AsesoriaEstudiante;
 import mx.edu.utez.sigea.docente.dao.DocenteDao;
 import mx.edu.utez.sigea.docente.model.DocenteMateria;
 import mx.edu.utez.sigea.estudiante.dao.EstudianteDao;
 import mx.edu.utez.sigea.estudiante.model.Estudiante;
 import mx.edu.utez.sigea.estudiante.model.EstudianteMatricula;
+import mx.edu.utez.sigea.estudiantegrupo.model.EstudianteGrupo;
 import mx.edu.utez.sigea.materia.dao.MateriaDao;
 import mx.edu.utez.sigea.materia.model.Materia;
 
@@ -29,10 +33,10 @@ import java.util.List;
 public class EstudianteServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String accion  = request.getParameter("accion");
+        String accion = request.getParameter("accion");
 
-        switch (accion){
-            case "cargarMateria":{
+        switch (accion) {
+            case "cargarMateria": {
 
                 HttpSession sesion = request.getSession();
                 if (sesion.getAttribute("idEstudiante") == null) {
@@ -56,56 +60,137 @@ public class EstudianteServlet extends HttpServlet {
                 break;
             }
 
-            case "recuperarEstudiante":{
+            case "recuperarEstudiante": {
                 String matricula = request.getParameter("matricula");
                 EstudianteDao estudianteDao = new EstudianteDao();
 
                 EstudianteMatricula estudiante = estudianteDao.recuperarEstudianteByMatricula(matricula);
                 PrintWriter out = response.getWriter();
-                if(estudiante!=null){
+                if (estudiante != null) {
 
                     Gson gson = new Gson();
 
 
                     out.print(gson.toJson(estudiante));
-                }else{
+                } else {
                     System.out.println("vacio");
                 }
-
-
 
 
                 break;
 
 
-
             }
 
-            case "registrarAsesoria":{
+            case "registrarAsesoria": {
 
-                    int idDocente = Integer.parseInt(request.getParameter("docente"));
-                    int idDia = Integer.parseInt(request.getParameter("dia"));
-                    int idHorario = Integer.parseInt(request.getParameter("horario"));
-                    String tema = request.getParameter("tema");
-                    String comentario  = request.getParameter("comentario");
-                    String [] estudiantes = request.getParameterValues("participantes");
+                int idDocente = Integer.parseInt(request.getParameter("docente"));
+                int idHorario = Integer.parseInt(request.getParameter("dia"));
+                String tema = request.getParameter("tema");
+                String comentario = request.getParameter("comentario");
+                String[] estudiantes = request.getParameterValues("participantes");
+                int idMateria = Integer.parseInt(request.getParameter("idMateria"));
 
-                for(String idEstudiante : estudiantes) {
+                System.out.println(idMateria);
+                boolean registrado = false;
+                for (String idEstudiante : estudiantes) {
+
+                    System.out.println("Id del estudiante " + idEstudiante);
                     //por cada idEstudiante voy a hacer una insercion en asesoria
+                    EstudianteDao estudianteDao = new EstudianteDao();
+                    EstudianteGrupo estudianteGrupo = estudianteDao.obtenerEstudianteById(Integer.parseInt(idEstudiante));
+                    System.out.println("Grupo del estudiante " + estudianteGrupo.getGrupo_id_grupo());
+                    int estudianteId = Integer.parseInt(idEstudiante);
+
+
+                    AsesoriaDao asesoriaDao = new AsesoriaDao();
+                    registrado = asesoriaDao.registrarAsesoria(1, idMateria, idDocente, tema, comentario, idHorario, estudianteGrupo.getGrupo_id_grupo(), 0, estudianteId);
+
 
 
 
                 }
 
+                if(registrado){
+                    System.out.println(registrado);
+                    PrintWriter out = response.getWriter();
+
+                    out.print("true");
+                }
 
 
+                break;
+            }
+
+            case "Agendadas":{
+
+
+                HttpSession sesion = request.getSession();
+                int idEstudiante = (int) sesion.getAttribute("idEstudiante");
+                AsesoriaEstudianteDao asesoriaDao = new AsesoriaEstudianteDao();
+                String usuario = asesoriaDao.obtenerUsuarioByID(idEstudiante);
+                List<AsesoriaEstudiante> asesorias = asesoriaDao.obtenerAsesoriasRegistradas(usuario);
+
+                EstudianteDao estudianteDao = new EstudianteDao();
+                Estudiante estudiante = new Estudiante();
+                estudiante.setId_estudiante(idEstudiante);
+                estudiante = estudianteDao.obtenerEstudiante(estudiante);
+
+
+
+                request.setAttribute("nombre", estudiante.getNombre_estudiante());
+                request.setAttribute("primerApellido", estudiante.getPrimerApellido_estudiante());
+                request.setAttribute("segundoApellido", estudiante.getSegundoApellido_estudiante());
+                request.setAttribute("genero", estudiante.getIdGenero());
+                request.setAttribute("asesorias",asesorias);
+                request.getRequestDispatcher("/Estudiante/asesoriasAgendadas.jsp").forward(request,response);
+
+
+
+             break;
+            }
+
+            case "Asesorias":{
+
+                HttpSession sesion = request.getSession();
+                if (sesion.getAttribute("idEstudiante") == null) {
+
+                    response.sendRedirect("iniciarSesion.jsp");
+                }
+
+                int idEstudiante = (int) sesion.getAttribute("idEstudiante");
+
+                EstudianteDao estudianteDao = new EstudianteDao();
+                Estudiante estudiante = new Estudiante();
+                estudiante.setId_estudiante(idEstudiante);
+                estudiante = estudianteDao.obtenerEstudiante(estudiante);
+
+                int idCarrera = estudiante.getIdCarrera();
+                MateriaDao materiaDao = new MateriaDao();
+
+                List<Materia> materias = materiaDao.listarMaterias(estudiante);
+
+
+                System.out.println("Estudiante " + estudiante.getNombre_estudiante());
+                System.out.println("--> " + idCarrera);
+                System.out.println("--> genero : " + estudiante.getIdGenero());
+                request.setAttribute("materias", materias);
+                request.setAttribute("nombre", estudiante.getNombre_estudiante());
+                request.setAttribute("primerApellido", estudiante.getPrimerApellido_estudiante());
+                request.setAttribute("segundoApellido", estudiante.getSegundoApellido_estudiante());
+                request.setAttribute("genero", estudiante.getIdGenero());
+                request.getRequestDispatcher("/Estudiante/dashboardEstudiante.jsp").forward(request, response);
+
+
+                break;
+            }
+
+            case "Concluidas":{
                 break;
             }
             default:
                 System.out.println("Nel");
         }
-
-
 
 
     }

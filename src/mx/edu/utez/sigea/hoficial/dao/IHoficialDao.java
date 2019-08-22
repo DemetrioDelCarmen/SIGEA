@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface IHoficialDao {
 
-    List<Hora> obtenerHoras(int idDocente, int idDia);
+    List<Hora> obtenerHoras(int idDocente);
 
 
 }

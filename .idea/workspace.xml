@@ -7,116 +7,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b220048-11e6-4087-9d2a-dd1df05a0c48" name="Default Changelist" comment="Trabajando en el modulo de asignar horarios, se opto por dividir los modulos de docentes asignados por los generales">
-      <change afterPath="$PROJECT_DIR$/../Estudiantes/.idea/libraries/com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Estudiantes/src/mx/edu/utez/estudiantes/docente/model/Docente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Estudiantes/src/mx/edu/utez/estudiantes/estado/controller/EstadoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Estudiantes/src/mx/edu/utez/estudiantes/estado/dao/EstadoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Estudiantes/src/mx/edu/utez/estudiantes/estado/dao/IDaoEstado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Estudiantes/src/mx/edu/utez/estudiantes/municipio/controller/MunicipioServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Estudiantes/src/mx/edu/utez/estudiantes/municipio/dao/IDaoMunicipio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Estudiantes/src/mx/edu/utez/estudiantes/municipio/dao/MunicipioDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Estudiantes/web/js/combos.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Repaso/.idea/libraries/mysql_mysql_connector_java_8_0_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Repaso/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Repaso/src/mx/edu/utez/repaso/libro/controller/LibroServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Repaso/src/mx/edu/utez/repaso/libro/dao/ILibroDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Repaso/src/mx/edu/utez/repaso/libro/dao/LibroDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Repaso/src/mx/edu/utez/repaso/libro/model/Libro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Repaso/src/mx/edu/utez/repaso/utility/Conexion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SIHR/.idea/artifacts/SIHR_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SIHR/.idea/libraries/jstl_jstl_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SIHR/.idea/libraries/mysql_mysql_connector_java_8_0_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SIHR/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SIHR/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SIHR/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SIHR/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SIHR/SIHR.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SIHR/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../platzi-ee/src/mx/edu/utez/platziee/estudiante/modelo/Estudiante.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../platzi-ee/src/mx/edu/utez/platziee/login/InicioSesionServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../platzi-ee/web/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../platzi-ee/web/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../platzi-ee/web/welcome.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/.idea/libraries/com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/.idea/libraries/commons_io_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/src/mx/edu/utez/servletsbasico/archivo/controller/ArchivoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/src/mx/edu/utez/servletsbasico/archivo/dao/ArchivoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/src/mx/edu/utez/servletsbasico/archivo/dao/IArchivoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/src/mx/edu/utez/servletsbasico/archivo/model/Archivo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/archivo/cargarArchivo.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/css/FAall.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/css/fontawesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/js/FAall.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/js/fontawesome.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/webfonts/fa-brands-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/webfonts/fa-brands-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/webfonts/fa-brands-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/webfonts/fa-brands-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/webfonts/fa-brands-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/webfonts/fa-regular-400.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/webfonts/fa-regular-400.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/webfonts/fa-regular-400.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/webfonts/fa-regular-400.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/webfonts/fa-regular-400.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/webfonts/fa-solid-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/webfonts/fa-solid-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/webfonts/fa-solid-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/webfonts/fa-solid-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/web/webfonts/fa-solid-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico/.idea/libraries/jstl_jstl_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico/src/mx/edu/utez/servletsbasico/rol/dao/IRolDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico/src/mx/edu/utez/servletsbasico/rol/dao/RolDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico/src/mx/edu/utez/servletsbasico/rol/model/Rol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico/src/mx/edu/utez/servletsbasico/usuario/dao/IUsuarioDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico/src/mx/edu/utez/servletsbasico/usuario/model/UsuarioRol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico/web/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico/web/js/ajax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico/web/js/asincrono.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico/web/js/validaciones.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlets-basico/web/usuario/form.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Estudiantes/.idea/artifacts/Estudiantes_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Estudiantes/.idea/artifacts/Estudiantes_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Estudiantes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Estudiantes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Estudiantes/Estudiantes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Estudiantes/Estudiantes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Estudiantes/out/artifacts/Estudiantes_war_exploded.war/WEB-INF/classes/mx/edu/utez/estudiantes/estudiante/controller/EstudianteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Estudiantes/out/artifacts/Estudiantes_war_exploded.war/WEB-INF/classes/mx/edu/utez/estudiantes/estudiante/controller/EstudianteServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Estudiantes/out/artifacts/Estudiantes_war_exploded.war/WEB-INF/classes/mx/edu/utez/estudiantes/estudiante/dao/EstudianteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Estudiantes/out/artifacts/Estudiantes_war_exploded.war/WEB-INF/classes/mx/edu/utez/estudiantes/estudiante/dao/EstudianteDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Estudiantes/out/artifacts/Estudiantes_war_exploded.war/WEB-INF/classes/mx/edu/utez/estudiantes/utility/Conexion.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Estudiantes/out/artifacts/Estudiantes_war_exploded.war/WEB-INF/classes/mx/edu/utez/estudiantes/utility/Conexion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Estudiantes/out/artifacts/Estudiantes_war_exploded.war/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Estudiantes/out/artifacts/Estudiantes_war_exploded.war/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Estudiantes/out/production/Estudiantes/mx/edu/utez/estudiantes/estudiante/controller/EstudianteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Estudiantes/out/production/Estudiantes/mx/edu/utez/estudiantes/estudiante/controller/EstudianteServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Estudiantes/out/production/Estudiantes/mx/edu/utez/estudiantes/estudiante/dao/EstudianteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Estudiantes/out/production/Estudiantes/mx/edu/utez/estudiantes/estudiante/dao/EstudianteDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Estudiantes/out/production/Estudiantes/mx/edu/utez/estudiantes/utility/Conexion.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Estudiantes/out/production/Estudiantes/mx/edu/utez/estudiantes/utility/Conexion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Estudiantes/src/mx/edu/utez/estudiantes/estudiante/controller/EstudianteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Estudiantes/src/mx/edu/utez/estudiantes/estudiante/controller/EstudianteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Estudiantes/src/mx/edu/utez/estudiantes/estudiante/dao/EstudianteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Estudiantes/src/mx/edu/utez/estudiantes/estudiante/dao/EstudianteDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Estudiantes/src/mx/edu/utez/estudiantes/utility/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Estudiantes/src/mx/edu/utez/estudiantes/utility/Conexion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Estudiantes/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Estudiantes/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/Estudiante/dashboardEstudiante.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/Estudiante/dashboardEstudiante.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/WEB-INF/classes/mx/edu/utez/sigea/estudiante/Controller/EstudianteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/WEB-INF/classes/mx/edu/utez/sigea/estudiante/Controller/EstudianteServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/WEB-INF/classes/mx/edu/utez/sigea/estudiante/dao/EstudianteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/WEB-INF/classes/mx/edu/utez/sigea/estudiante/dao/EstudianteDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/WEB-INF/classes/mx/edu/utez/sigea/estudiante/model/EstudianteMatricula.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/WEB-INF/classes/mx/edu/utez/sigea/estudiante/model/EstudianteMatricula.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/WEB-INF/classes/mx/edu/utez/sigea/estudiante/dao/IEstudianteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/WEB-INF/classes/mx/edu/utez/sigea/estudiante/dao/IEstudianteDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/WEB-INF/classes/mx/edu/utez/sigea/hoficial/controller/HoficialServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/WEB-INF/classes/mx/edu/utez/sigea/hoficial/controller/HoficialServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/WEB-INF/classes/mx/edu/utez/sigea/hoficial/dao/HoficialDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/WEB-INF/classes/mx/edu/utez/sigea/hoficial/dao/HoficialDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/WEB-INF/classes/mx/edu/utez/sigea/hoficial/dao/IHoficialDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/WEB-INF/classes/mx/edu/utez/sigea/hoficial/dao/IHoficialDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/js/dbEstudiante.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SIGEA_1_0_1_war_exploded.war/js/dbEstudiante.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SIGEA-1.0.1/mx/edu/utez/sigea/estudiante/Controller/EstudianteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SIGEA-1.0.1/mx/edu/utez/sigea/estudiante/Controller/EstudianteServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SIGEA-1.0.1/mx/edu/utez/sigea/estudiante/dao/EstudianteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SIGEA-1.0.1/mx/edu/utez/sigea/estudiante/dao/EstudianteDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SIGEA-1.0.1/mx/edu/utez/sigea/estudiante/model/EstudianteMatricula.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SIGEA-1.0.1/mx/edu/utez/sigea/estudiante/model/EstudianteMatricula.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SIGEA-1.0.1/mx/edu/utez/sigea/estudiante/dao/IEstudianteDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SIGEA-1.0.1/mx/edu/utez/sigea/estudiante/dao/IEstudianteDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SIGEA-1.0.1/mx/edu/utez/sigea/hoficial/controller/HoficialServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SIGEA-1.0.1/mx/edu/utez/sigea/hoficial/controller/HoficialServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SIGEA-1.0.1/mx/edu/utez/sigea/hoficial/dao/HoficialDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SIGEA-1.0.1/mx/edu/utez/sigea/hoficial/dao/HoficialDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SIGEA-1.0.1/mx/edu/utez/sigea/hoficial/dao/IHoficialDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SIGEA-1.0.1/mx/edu/utez/sigea/hoficial/dao/IHoficialDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/Controller/EstudianteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/Controller/EstudianteServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/dao/EstudianteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/dao/EstudianteDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/model/EstudianteMatricula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/model/EstudianteMatricula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/dao/IEstudianteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/dao/IEstudianteDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/controller/HoficialServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/controller/HoficialServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/dao/HoficialDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/dao/HoficialDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/dao/IHoficialDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/dao/IHoficialDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/Estudiante/dashboardEstudiante.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Estudiante/dashboardEstudiante.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/styleR.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/styleR.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/js/dbEstudiante.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/dbEstudiante.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../servlets-basico/.idea/artifacts/servlets_basico_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../servlets-basico/.idea/artifacts/servlets_basico_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../servlets-basico/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../servlets-basico/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../servlets-basico/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../servlets-basico/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../servlets-basico/out/artifacts/servlets_basico_war_exploded.war/WEB-INF/classes/mx/edu/utez/servletsbasico/usuario/controller/UsuarioServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../servlets-basico/out/artifacts/servlets_basico_war_exploded.war/WEB-INF/classes/mx/edu/utez/servletsbasico/usuario/controller/UsuarioServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../servlets-basico/out/artifacts/servlets_basico_war_exploded.war/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../servlets-basico/out/artifacts/servlets_basico_war_exploded.war/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../servlets-basico/out/artifacts/servlets_basico_war_exploded.war/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../servlets-basico/out/artifacts/servlets_basico_war_exploded.war/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../servlets-basico/out/artifacts/servlets_basico_war_exploded.war/js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../servlets-basico/out/production/servlets-basico/mx/edu/utez/servletsbasico/usuario/controller/UsuarioServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../servlets-basico/out/production/servlets-basico/mx/edu/utez/servletsbasico/usuario/controller/UsuarioServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../servlets-basico/servlets-basico.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../servlets-basico/servlets-basico.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../servlets-basico/src/mx/edu/utez/servletsbasico/usuario/controller/UsuarioServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../servlets-basico/src/mx/edu/utez/servletsbasico/usuario/controller/UsuarioServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../servlets-basico/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../servlets-basico/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../servlets-basico/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../servlets-basico/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../servlets-basico/web/js/script.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -144,73 +59,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/dbEstudiante.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="328" selection-start-line="328" selection-end-line="328" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/Administrador.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1075">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            <state relative-caret-position="50">
+              <caret line="2" selection-start-line="2" selection-end-line="30" />
               <folding>
-                <element signature="e#26#306#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Estudiante/dashboardEstudiante.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="63" />
-              <folding>
-                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/model/EstudianteMatricula.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
-              <folding>
-                <element signature="e#593#594#0" expanded="true" />
-                <element signature="e#628#629#0" expanded="true" />
-                <element signature="e#681#682#0" expanded="true" />
-                <element signature="e#729#730#0" expanded="true" />
-                <element signature="e#762#763#0" expanded="true" />
-                <element signature="e#794#795#0" expanded="true" />
-                <element signature="e#841#842#0" expanded="true" />
-                <element signature="e#883#884#0" expanded="true" />
-                <element signature="e#915#916#0" expanded="true" />
-                <element signature="e#946#947#0" expanded="true" />
-                <element signature="e#991#992#0" expanded="true" />
-                <element signature="e#1031#1032#0" expanded="true" />
-                <element signature="e#1062#1063#0" expanded="true" />
-                <element signature="e#1092#1093#0" expanded="true" />
-                <element signature="e#1135#1136#0" expanded="true" />
-                <element signature="e#1173#1174#0" expanded="true" />
-                <element signature="e#1206#1207#0" expanded="true" />
-                <element signature="e#1235#1236#0" expanded="true" />
-                <element signature="e#1279#1280#0" expanded="true" />
-                <element signature="e#1315#1316#0" expanded="true" />
-                <element signature="e#1351#1352#0" expanded="true" />
-                <element signature="e#1383#1384#0" expanded="true" />
-                <element signature="e#1433#1434#0" expanded="true" />
-                <element signature="e#1475#1476#0" expanded="true" />
+                <element signature="e#5133#6413#0" />
               </folding>
             </state>
           </provider>
@@ -219,17 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/Administrador/DocentesGenerales.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4900">
+            <state relative-caret-position="2111">
               <caret line="196" column="86" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/inicioSesion.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="17" column="10" selection-start-line="6" selection-start-column="7" selection-end-line="17" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -237,17 +83,79 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/Controller/EstudianteServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="95" selection-start-line="95" selection-end-line="95" />
+            <state relative-caret-position="260">
+              <caret line="145" column="68" selection-start-line="145" selection-start-column="68" selection-end-line="145" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/Estudiante/asesoriasAgendadas.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="130" column="105" selection-start-line="130" selection-start-column="105" selection-end-line="130" selection-end-column="105" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/utility/Conexion.java">
+        <entry file="file://$PROJECT_DIR$/web/Docente/asesoriasAgendadas.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-200">
-              <caret line="8" selection-start-line="8" selection-end-line="22" selection-end-column="5" />
+            <state relative-caret-position="50">
+              <caret line="120" column="59" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
+              <folding>
+                <element signature="n#style#0;n#li#0;n#div#0;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#div#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#div#2;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/dbDocente.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="688">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoriaestudiante/model/AsesoriaEstudiante.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="74" column="18" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
+              <folding>
+                <element signature="e#627#628#0" expanded="true" />
+                <element signature="e#657#658#0" expanded="true" />
+                <element signature="e#703#704#0" expanded="true" />
+                <element signature="e#741#742#0" expanded="true" />
+                <element signature="e#771#772#0" expanded="true" />
+                <element signature="e#797#798#0" expanded="true" />
+                <element signature="e#835#836#0" expanded="true" />
+                <element signature="e#865#866#0" expanded="true" />
+                <element signature="e#896#897#0" expanded="true" />
+                <element signature="e#923#924#0" expanded="true" />
+                <element signature="e#963#964#0" expanded="true" />
+                <element signature="e#995#996#0" expanded="true" />
+                <element signature="e#1035#1036#0" expanded="true" />
+                <element signature="e#1071#1072#0" expanded="true" />
+                <element signature="e#1129#1130#0" expanded="true" />
+                <element signature="e#1179#1180#0" expanded="true" />
+                <element signature="e#1216#1217#0" expanded="true" />
+                <element signature="e#1249#1250#0" expanded="true" />
+                <element signature="e#1301#1302#0" expanded="true" />
+                <element signature="e#1345#1346#0" expanded="true" />
+                <element signature="e#1378#1379#0" expanded="true" />
+                <element signature="e#1407#1408#0" expanded="true" />
+                <element signature="e#1451#1452#0" expanded="true" />
+                <element signature="e#1487#1488#0" expanded="true" />
+                <element signature="e#1527#1528#0" expanded="true" />
+                <element signature="e#1563#1564#0" expanded="true" />
+                <element signature="e#1621#1622#0" expanded="true" />
+                <element signature="e#1671#1672#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -255,8 +163,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/dao/EstudianteDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1400">
-              <caret line="66" column="57" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
+            <state relative-caret-position="246">
+              <caret line="101" column="29" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -265,10 +173,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/dao/IEstudianteDao.java">
+        <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoriaestudiante/dao/AsesoriaEstudianteDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+            <state relative-caret-position="324">
+              <caret line="38" column="86" selection-start-line="38" selection-start-column="86" selection-end-line="38" selection-end-column="86" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -282,10 +190,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="JavaScript File" />
-        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -302,6 +210,8 @@
       <find>materiaas</find>
       <find>formHorario</find>
       <find>cargamo</find>
+      <find>formula</find>
+      <find>id de</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -310,15 +220,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/Estudiante/materias.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/web/js/inicioSesion.js" />
-        <option value="$PROJECT_DIR$/web/iniciarSesion.jsp" />
-        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/administrador/dao/DocentesDao.java" />
-        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/docente/controller/DocenteServlet.java" />
-        <option value="$PROJECT_DIR$/web/Administador/dashboardAdmin.jsp" />
-        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/usuario/controller/UsuarioServlet.java" />
-        <option value="$PROJECT_DIR$/web/css/docentes.css" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/grupo/model/Grupo.java" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/periodo/model/Periodo.java" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/model/Estudiante.java" />
@@ -348,19 +249,28 @@
         <option value="$PROJECT_DIR$/web/Administrador/docentes.jsp" />
         <option value="$PROJECT_DIR$/web/js/Administrador.js" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/model/Hora.java" />
-        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/dao/IHoficialDao.java" />
-        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/dao/HoficialDao.java" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/hoficialServlet.java" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/dia/dao/DiaDao.java" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/controller/hoficialServlet.java" />
-        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/controller/HoficialServlet.java" />
-        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/dao/IEstudianteDao.java" />
-        <option value="$PROJECT_DIR$/web/css/styleR.css" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/model/EstudianteMatricula.java" />
+        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoria/dao/IAsesoriaDao.java" />
+        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoria/dao/AsesoriaDao.java" />
+        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/dao/IEstudianteDao.java" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/dao/EstudianteDao.java" />
-        <option value="$PROJECT_DIR$/web/js/dbEstudiante.js" />
+        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/dao/HoficialDao.java" />
+        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/dao/IHoficialDao.java" />
+        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/controller/HoficialServlet.java" />
         <option value="$PROJECT_DIR$/web/Estudiante/dashboardEstudiante.jsp" />
+        <option value="$PROJECT_DIR$/web/css/styleR.css" />
+        <option value="$PROJECT_DIR$/web/js/dbEstudiante.js" />
+        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/model/EstudianteAsesoria.java" />
+        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoriaestudiante/dao/IAsesoriaEstudianteDao.java" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/Controller/EstudianteServlet.java" />
+        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoriaestudiante/model/AsesoriaEstudiante.java" />
+        <option value="$PROJECT_DIR$/web/js/dbDocente.js" />
+        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoriaestudiante/dao/AsesoriaEstudianteDao.java" />
+        <option value="$PROJECT_DIR$/web/Docente/asesoriasAgendadas.jsp" />
+        <option value="$PROJECT_DIR$/web/Estudiante/asesoriasAgendadas.jsp" />
       </list>
     </option>
   </component>
@@ -414,6 +324,36 @@
               <item name="SIGEA-1.0.1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sigea" type="462c0819:PsiDirectoryNode" />
+              <item name="administrador" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SIGEA-1.0.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SIGEA-1.0.1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sigea" type="462c0819:PsiDirectoryNode" />
+              <item name="administrador" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SIGEA-1.0.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SIGEA-1.0.1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sigea" type="462c0819:PsiDirectoryNode" />
+              <item name="administrador" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SIGEA-1.0.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SIGEA-1.0.1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sigea" type="462c0819:PsiDirectoryNode" />
+              <item name="asesoriaestudiante" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SIGEA-1.0.1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SIGEA-1.0.1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sigea" type="462c0819:PsiDirectoryNode" />
               <item name="estudiante" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -453,7 +393,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sigea" type="462c0819:PsiDirectoryNode" />
               <item name="hoficial" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SIGEA-1.0.1" type="b2602c69:ProjectViewProjectNode" />
@@ -711,18 +651,17 @@
       <workItem from="1565906395712" duration="12293000" />
       <workItem from="1565920169219" duration="10310000" />
       <workItem from="1566240335811" duration="1379000" />
-      <workItem from="1566318934075" duration="3207000" />
+      <workItem from="1566318934075" duration="33414000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="321568000" />
+    <option name="totallyTimeSpent" value="351775000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48281506" visible="true" weight="0.2632375" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48281506" visible="true" weight="0.2708018" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -732,7 +671,7 @@
       <window_info id="Web" order="7" sideWeight="0.5171849" side_tool="true" weight="0.22314675" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.47463176" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2913257" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -757,7 +696,7 @@
       <window_info anchor="right" x="0" y="0" width="295" height="544" id="Documentation" order="9" sideWeight="0.5008183" side_tool="true" weight="0.24962178" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48281506" visible="true" weight="0.2526475" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48281506" visible="true" weight="0.2708018" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -816,129 +755,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/usuario/dao/UsuarioDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.sql/java/sql/PreparedStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="77" column="14" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Estudiante/estadisticas.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="20" selection-start-line="20" selection-end-line="171" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/docente/controller/DocenteServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2825">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/grupo/model/Grupo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-          <folding>
-            <element signature="e#429#430#0" expanded="true" />
-            <element signature="e#460#461#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
-            <element signature="e#587#588#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-            <element signature="e#883#884#0" expanded="true" />
-            <element signature="e#931#932#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/periodo/model/Periodo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#544#545#0" expanded="true" />
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/model/EstudianteGrupo.java" />
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiantegrupo/model/EstudianteGrupo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="47" selection-start-column="47" selection-end-column="47" />
-          <folding>
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#534#535#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#696#697#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="e#875#876#0" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#1021#1022#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/status_asesoria/model/Status_asesoria.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-          <folding>
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#622#623#0" expanded="true" />
-            <element signature="e#660#661#0" expanded="true" />
-            <element signature="e#722#723#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/docentes_materias/model/DocentesMaterias.java" />
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/materia/model/Materia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-226">
-          <caret line="4" column="41" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/materia/dao/MateriaDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
@@ -1007,16 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/docente/dao/DocenteDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/administrador/dao/IAdminDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -1034,24 +840,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/Administrador/dashboardAdmin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="68" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/docentes.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="611">
           <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/administrador/controller/AdministradorServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="48" column="78" lean-forward="true" selection-start-line="48" selection-start-column="78" selection-end-line="48" selection-end-column="78" />
         </state>
       </provider>
     </entry>
@@ -1111,30 +903,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/administrador/dao/AdministradorDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="78" column="29" lean-forward="true" selection-start-line="76" selection-start-column="11" selection-end-line="78" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/dia/controller/DiasServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="29" column="30" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/dao/IHoficialDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1148,34 +920,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/dao/HoficialDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/controller/HoficialServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/model/Estudiante.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1350">
           <caret line="82" column="18" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/styleR.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="229" column="23" lean-forward="true" selection-start-line="229" selection-start-column="23" selection-end-line="229" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1186,13 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/model/Hora.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/iniciarSesion.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
@@ -1200,47 +941,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/Administrador.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1075">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="e#26#306#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Administrador/DocentesGenerales.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4900">
-          <caret line="196" column="86" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/inicioSesion.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="17" column="10" selection-start-line="6" selection-start-column="7" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/dao/EstudianteDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="66" column="57" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/dao/IEstudianteDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1277,13 +981,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/Controller/EstudianteServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/utility/Conexion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-200">
@@ -1291,24 +988,269 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoria/dao/IAsesoriaDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/docente/dao/DocenteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/dao/IEstudianteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/model/Hora.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/dao/HoficialDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/dao/IHoficialDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoria/dao/AsesoriaDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/controller/HoficialServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="18" column="68" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/administrador/controller/AdministradorServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="48" column="78" lean-forward="true" selection-start-line="48" selection-start-column="78" selection-end-line="48" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/Administrador.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1471">
+          <caret line="113" column="38" selection-start-line="101" selection-start-column="19" selection-end-line="113" selection-end-column="38" />
+          <folding>
+            <element signature="e#26#306#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Estudiante/estudianteAgendadas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" selection-start-line="6" selection-end-line="72" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Estudiante/materias.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1750" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/styleR.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2701">
+          <caret line="155" column="59" selection-start-line="155" selection-start-column="59" selection-end-line="155" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Administrador/dashboardAdmin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="72" column="19" selection-start-line="70" selection-start-column="12" selection-end-line="72" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#li#0;n#div#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/model/EstudianteAsesoria.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/administrador/dao/AdministradorDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="78" column="29" lean-forward="true" selection-start-line="76" selection-start-column="11" selection-end-line="78" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoriaestudiante/dao/IAsesoriaEstudianteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/Estudiante/dashboardEstudiante.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="63" />
+        <state relative-caret-position="150">
+          <caret line="58" column="79" lean-forward="true" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="79" />
           <folding>
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#li#0;n#div#0;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#div#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#div#2;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoriaestudiante/model/AsesoriaEstudiante.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="74" column="18" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
+          <folding>
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#797#798#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+            <element signature="e#995#996#0" expanded="true" />
+            <element signature="e#1035#1036#0" expanded="true" />
+            <element signature="e#1071#1072#0" expanded="true" />
+            <element signature="e#1129#1130#0" expanded="true" />
+            <element signature="e#1179#1180#0" expanded="true" />
+            <element signature="e#1216#1217#0" expanded="true" />
+            <element signature="e#1249#1250#0" expanded="true" />
+            <element signature="e#1301#1302#0" expanded="true" />
+            <element signature="e#1345#1346#0" expanded="true" />
+            <element signature="e#1378#1379#0" expanded="true" />
+            <element signature="e#1407#1408#0" expanded="true" />
+            <element signature="e#1451#1452#0" expanded="true" />
+            <element signature="e#1487#1488#0" expanded="true" />
+            <element signature="e#1527#1528#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+            <element signature="e#1621#1622#0" expanded="true" />
+            <element signature="e#1671#1672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Administrador/DocentesGenerales.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2111">
+          <caret line="196" column="86" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="86" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/dbEstudiante.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="328" selection-start-line="328" selection-end-line="328" />
+        <state relative-caret-position="50">
+          <caret line="2" selection-start-line="2" selection-end-line="30" />
+          <folding>
+            <element signature="e#5133#6413#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/dbDocente.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/dao/EstudianteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="101" column="29" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoriaestudiante/dao/AsesoriaEstudianteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="38" column="86" selection-start-line="38" selection-start-column="86" selection-end-line="38" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/Controller/EstudianteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="145" column="68" selection-start-line="145" selection-start-column="68" selection-end-line="145" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Docente/asesoriasAgendadas.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="120" column="59" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
+          <folding>
+            <element signature="n#style#0;n#li#0;n#div#0;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#div#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#div#2;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Estudiante/asesoriasAgendadas.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="130" column="105" selection-start-line="130" selection-start-column="105" selection-end-line="130" selection-end-column="105" />
         </state>
       </provider>
     </entry>

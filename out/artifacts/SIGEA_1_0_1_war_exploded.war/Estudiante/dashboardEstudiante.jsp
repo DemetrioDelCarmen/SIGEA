@@ -58,18 +58,28 @@
     <nav id="sidebar">
         <div id="nombre"> ${nombre} ${primerApellido} ${segundoApellido} </div>
         <ul>
-            <a href="#">
+            <div id="asesorias">
 
-                <li style="background-color: rgb(48, 117, 103)">
+                <li style="background-color: rgb(48, 117, 103); cursor: pointer">
                     <img src="resources/IMG/asesoria.png" alt="" class="iclog"/>ASESORIAS
                 </li>
-            </a>
-            <a href="estudianteAgendadas.html">
-                <li><img src="resources/IMG/agenda.png" alt="" class="iclog"/>AGENDADAS</li>
-            </a>
-            <a href="estudianteConcluidas.html">
-                <li><img src="resources/IMG/asesoriaconcluida.png" alt="" class="iclog"/>CONCLUIDAS</li>
-            </a>
+
+            </div>
+
+            <div id="agendadas">
+
+                <li style="cursor:pointer;"><img src="resources/IMG/agenda.png" alt="" class="iclog"/>AGENDADAS</li>
+
+            </div>
+            <div id="concluidas">
+
+                <li style="cursor:pointer;"><img src="resources/IMG/asesoriaconcluida.png" alt="" class="iclog"/>CONCLUIDAS</li>
+
+            </div>
+
+            <form id="nav">
+                <input type="hidden" name="accion"/>
+            </form>
 
 
         </ul>
@@ -142,18 +152,10 @@
 
                                         <div class="form-group">
 
-                                            <label for="dia">Día para la asesoría</label>
+                                            <label for="dia">Elije cuándo</label>
 
                                             <select class="form-control" name="dia" id="dia">
-                                                <option value="0">Elige un día</option>
                                             </select>
-
-                                            <label for="horario">Horario</label>
-
-                                            <select class="form-control" name="horario" id="horario">
-                                                <option value="0">Selecciona un Horario</option>
-                                            </select>
-
                                         </div>
 
 
@@ -215,9 +217,12 @@
                             </div>
 
                             <input type="hidden" name="idGrupo" value="" id="idGrupo">
+                            <input type="hidden" name="idMateria" id="idMateria" value="">
                             </form>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal" id="cancelarRegistro">
+                                    Cancelar
+                                </button>
                                 <button type="button" class="btn btn-success" id="registrar">Registrar</button>
                             </div>
                         </div>

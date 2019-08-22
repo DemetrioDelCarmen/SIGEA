@@ -23,14 +23,14 @@ public class HoficialServlet extends HttpServlet {
         String accion = request.getParameter("accion");
 
         switch (accion) {
-            case "obtenerHora": {
+            case "obtenerHorario": {
 
                 int idDocente = Integer.parseInt(request.getParameter("idDocente"));
-                int idDia = Integer.parseInt(request.getParameter("idDia"));
+
 
 
                 HoficialDao hofDao = new HoficialDao();
-                List<Hora> horas = hofDao.obtenerHoras(idDocente, idDia);
+                List<Hora> horas = hofDao.obtenerHoras(idDocente);
 
                 Gson gson = new Gson();
 

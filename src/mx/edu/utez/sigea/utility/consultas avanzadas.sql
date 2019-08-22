@@ -13,3 +13,8 @@ DELIMITER ;
 CALL loadUserByID(2);
 -- SELECT Nombre_mat, 
 
+
+
+SELECT  Nombre_docente, PrimerApellido_docente, SegundoApellido_docente,usuario from docente dc JOIN 
+		usuario us on dc.usuario_id_User = us.id_User 
+        WHERE us.usuario = 'hugoalejandres';

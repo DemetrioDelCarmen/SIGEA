@@ -17,7 +17,7 @@
 
     <script src="js/jquery-3.4.1.min.js" type="application/javascript"></script>
     <script src="js/bootstrap.min.js" type="application/javascript"></script>
-    <script src="js/dbEstudiante.js" type="application/javascript"></script>
+    <script src="js/agendadas.js" type="application/javascript"></script>
 
     <script src="js/sweetalert.min.js"></script>
     <script src="js/sweetalert2.all.min.js"></script>
@@ -66,7 +66,8 @@
             </div>
             <div id="concluidas">
 
-                <li style="cursor:pointer;"><img src="resources/IMG/asesoriaconcluida.png" alt="" class="iclog"/>CONCLUIDAS</li>
+                <li style="cursor:pointer;"><img src="resources/IMG/asesoriaconcluida.png" alt="" class="iclog"/>CONCLUIDAS
+                </li>
 
             </div>
 
@@ -74,6 +75,8 @@
                 <input type="hidden" name="accion"/>
             </form>
         </ul>
+
+
         <div class="row justify-content-center">
 
             <div id="salir"><input type="button" class="btn btn-info" value="Salir"></div>
@@ -83,89 +86,89 @@
 <!-- CONTENIDO DE LA PAGINA  -->
 <div id="content">
 
-    <div class="container-fluid" id="agendarasesoria">
-        <h4>No tienes asesorías agendadas aún, agenda aquí</h4>
-    </div>
+    <c:if test="${numeroAsesorias == 0 }">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
 
-    <form id="nav2">
-        <input type="hidden" name="accion"/>
-    </form>
+                <div class="alert alert-primary align-content-center" role="alert"
+                     style="cursor: pointer;" id="irAgendar">
+                    No tienes asesorías agendadas, agenda una aquí!
+                </div>
+                <form id="nav2">
+                    <input type="hidden" name="accion"/>
+                </form>
+
+            </div>
+            <div class="col-3"></div>
+        </div>
+
+
+
+    </c:if>
+
 
     <div class="row justify-content-center">
 
+        <div class="tablaDocentesAsesorias">
+            <div class="row">
 
 
-            <div class="tablaDocentesAsesorias">
-                <div class="row">
 
-                        <table class="table  tListadoDocentes">
-                            <thead class="th_listadoDocentes">
+                <c:if test="${numeroAsesorias >=1}">
+                    <table class="table  tListadoDocentes">
+                        <thead class="th_listadoDocentes">
+                        <tr>
+                            <th>Día</th>
+                            <th>Hora</th>
+                            <th>Docente</th>
+                            <th>Comentario</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                            <th>Participantes</th>
+                        </tr>
+                        </thead>
+                        <tbody class="tb_listadoDocentes">
+                        <c:forEach items="${asesorias}" var="asesoria">
+
                             <tr>
-                                <th>Día</th>
-                                <th>Hora</th>
-                                <th>Docente</th>
-                                <th>Comentario</th>
-                                <th>Estado</th>
-                                <th>Acciones</th>
-                                <th>Participantes</th>
-                            </tr>
-                            </thead>
-                            <tbody class="tb_listadoDocentes">
-                            <c:forEach items="${asesorias}" var="asesoria">
-                                <tr>
-                                    <td class="tb_listadoDocentes">${asesoria.dia}</td>
-                                    <td class="tb_listadoDocentes">${asesoria.hora}</td>
-                                    <td class="tb_listadoDocentes">${asesoria.nombreDocente}</td>
-                                    <td class="tb_listadoDocentes">${asesoria.comentario}</td>
-                                    <c:if test="${asesoria.estado=='Solicitada'}">
-                                        <td class="tb_listadoDocentes">
-                                            <span class="badge badge-pill badge-primary">${asesoria.estado}</span>
-                                        </td>
-                                    </c:if>
-                                    <c:if test="${asesoria.estado=='Reagendada'}">
-                                        <td class="tb_listadoDocentes">
-                                            <span class="badge badge-pill badge-warning">${asesoria.estado}</span>
-                                        </td>
-                                    </c:if>
+                                <td class="tb_listadoDocentes">${asesoria.dia}</td>
+                                <td class="tb_listadoDocentes">${asesoria.hora}</td>
+                                <td class="tb_listadoDocentes">${asesoria.nombreDocente}</td>
+                                <td class="tb_listadoDocentes">${asesoria.comentario}</td>
+                                <c:if test="${asesoria.estado=='Solicitada'}">
                                     <td class="tb_listadoDocentes">
-                                        <button class="btn btn-danger btn-sm btnEliminar" id="btnCancelar" value="${idEstudiante}" >Cancelar</button>
+                                        <span class="badge badge-pill badge-primary">${asesoria.estado}</span>
                                     </td>
-                                    <td class="tb_listadoDocentes">${asesoria.participantes}</td>
-                                </tr>
-                            </c:forEach>
-                            </tbody>
-                        </table>
+                                </c:if>
+                                <c:if test="${asesoria.estado=='Reagendada'}">
+                                    <td class="tb_listadoDocentes">
+                                        <span class="badge badge-pill badge-warning">${asesoria.estado}</span>
+                                    </td>
+                                </c:if>
 
 
-                </div>
+                                <td class="tb_listadoDocentes">
+                                    <button class="btn btn-danger btn-sm btnEliminar" id="btnCancelar"
+                                            value="${idEstudiante}"
 
-
+                                    >Cancelar
+                                    </button>
+                                </td>
+                                <td class="tb_listadoDocentes">${asesoria.participantes}</td>
+                            </tr>
+                        </c:forEach>
+                        </tbody>
+                    </table>
+                </c:if>
             </div>
 
 
         </div>
+
 
     </div>
 
-
-
-    <!--
-        <a href="estudiante.html">
-            <div class="container-fluid" id="agendarasesoria">
-                <h4>No tienes asesorías agendadas aún, agenda aquí</h4>
-            </div>
-        </a>
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="sinasesoria"></div>
-
-            </div>
-        </div>
-
-        -->
-
-
-</div>
 
 </div>
 </body>

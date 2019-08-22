@@ -9,7 +9,9 @@
     <list default="true" id="2b220048-11e6-4087-9d2a-dd1df05a0c48" name="Default Changelist" comment="Trabajando en el modulo de asignar horarios, se opto por dividir los modulos de docentes asignados por los generales">
       <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/Controller/EstudianteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/Controller/EstudianteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mx/edu/utez/sigea/utility/consultas avanzadas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/mx/edu/utez/sigea/utility/consultas avanzadas.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/Estudiante/asesoriasAgendadas.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Estudiante/asesoriasAgendadas.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servlets-basico - copia 1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../servlets-basico - copia 1/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/dbEstudiante.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" selection-start-line="2" selection-end-line="30" />
+            <state relative-caret-position="325">
+              <caret line="43" column="25" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="25" />
               <folding>
                 <element signature="e#5133#6413#0" />
               </folding>
@@ -50,10 +52,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Administrador/DocentesGenerales.jsp">
+        <entry file="file://$PROJECT_DIR$/web/js/Administrador.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2111">
-              <caret line="196" column="86" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="86" />
+            <state relative-caret-position="450">
+              <caret line="34" column="49" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="34" selection-end-column="49" />
+              <folding>
+                <element signature="e#26#306#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/js/agendadas.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/Estudiante/dashboardEstudiante.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="180" column="33" lean-forward="true" selection-start-line="180" selection-start-column="33" selection-end-line="180" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -61,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/Controller/EstudianteServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="141" column="50" selection-start-line="141" selection-start-column="38" selection-end-line="141" selection-end-column="50" />
+            <state relative-caret-position="485">
+              <caret line="145" column="53" selection-start-line="145" selection-start-column="38" selection-end-line="145" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -70,70 +93,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/Estudiante/asesoriasAgendadas.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="130" column="128" selection-start-line="130" selection-start-column="128" selection-end-line="130" selection-end-column="128" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Docente/asesoriasAgendadas.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="120" column="59" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
+            <state relative-caret-position="63">
+              <caret line="93" column="70" selection-start-line="93" selection-start-column="70" selection-end-line="93" selection-end-column="70" />
               <folding>
-                <element signature="n#style#0;n#li#0;n#div#0;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#div#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#0;n#div#2;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/dbDocente.js">
+        <entry file="file://$PROJECT_DIR$/web/css/styleR.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoriaestudiante/model/AsesoriaEstudiante.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="74" column="18" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
-              <folding>
-                <element signature="e#627#628#0" expanded="true" />
-                <element signature="e#657#658#0" expanded="true" />
-                <element signature="e#703#704#0" expanded="true" />
-                <element signature="e#741#742#0" expanded="true" />
-                <element signature="e#771#772#0" expanded="true" />
-                <element signature="e#797#798#0" expanded="true" />
-                <element signature="e#835#836#0" expanded="true" />
-                <element signature="e#865#866#0" expanded="true" />
-                <element signature="e#896#897#0" expanded="true" />
-                <element signature="e#923#924#0" expanded="true" />
-                <element signature="e#963#964#0" expanded="true" />
-                <element signature="e#995#996#0" expanded="true" />
-                <element signature="e#1035#1036#0" expanded="true" />
-                <element signature="e#1071#1072#0" expanded="true" />
-                <element signature="e#1129#1130#0" expanded="true" />
-                <element signature="e#1179#1180#0" expanded="true" />
-                <element signature="e#1216#1217#0" expanded="true" />
-                <element signature="e#1249#1250#0" expanded="true" />
-                <element signature="e#1301#1302#0" expanded="true" />
-                <element signature="e#1345#1346#0" expanded="true" />
-                <element signature="e#1378#1379#0" expanded="true" />
-                <element signature="e#1407#1408#0" expanded="true" />
-                <element signature="e#1451#1452#0" expanded="true" />
-                <element signature="e#1487#1488#0" expanded="true" />
-                <element signature="e#1527#1528#0" expanded="true" />
-                <element signature="e#1563#1564#0" expanded="true" />
-                <element signature="e#1621#1622#0" expanded="true" />
-                <element signature="e#1671#1672#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="25">
+              <caret line="155" column="59" selection-start-line="155" selection-start-column="59" selection-end-line="155" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -198,7 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/grupo/model/Grupo.java" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/periodo/model/Periodo.java" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/model/Estudiante.java" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/model/EstudianteGrupo.java" />
@@ -240,14 +212,15 @@
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/hoficial/controller/HoficialServlet.java" />
         <option value="$PROJECT_DIR$/web/Estudiante/dashboardEstudiante.jsp" />
         <option value="$PROJECT_DIR$/web/css/styleR.css" />
-        <option value="$PROJECT_DIR$/web/js/dbEstudiante.js" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/model/EstudianteAsesoria.java" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoriaestudiante/dao/IAsesoriaEstudianteDao.java" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoriaestudiante/model/AsesoriaEstudiante.java" />
         <option value="$PROJECT_DIR$/web/js/dbDocente.js" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoriaestudiante/dao/AsesoriaEstudianteDao.java" />
         <option value="$PROJECT_DIR$/web/Docente/asesoriasAgendadas.jsp" />
+        <option value="$PROJECT_DIR$/web/js/dbEstudiante.js" />
         <option value="$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/Controller/EstudianteServlet.java" />
+        <option value="$PROJECT_DIR$/web/js/agendadas.js" />
         <option value="$PROJECT_DIR$/web/Estudiante/asesoriasAgendadas.jsp" />
       </list>
     </option>
@@ -629,18 +602,18 @@
       <workItem from="1565906395712" duration="12293000" />
       <workItem from="1565920169219" duration="10310000" />
       <workItem from="1566240335811" duration="1379000" />
-      <workItem from="1566318934075" duration="34098000" />
+      <workItem from="1566318934075" duration="39058000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="352459000" />
+    <option name="totallyTimeSpent" value="357419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48281506" weight="0.2708018" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48281506" visible="true" weight="0.15733737" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -734,16 +707,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/materia/dao/MateriaDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/docente/dao/IDocenteDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -1045,16 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/Administrador.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1471">
-          <caret line="113" column="38" selection-start-line="101" selection-start-column="19" selection-end-line="113" selection-end-column="38" />
-          <folding>
-            <element signature="e#26#306#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="536">
@@ -1072,13 +1025,6 @@
     <entry file="file://$PROJECT_DIR$/web/Estudiante/materias.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/styleR.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2701">
-          <caret line="155" column="59" selection-start-line="155" selection-start-column="59" selection-end-line="155" selection-end-column="59" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/Administrador/dashboardAdmin.jsp">
@@ -1114,15 +1060,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/Estudiante/dashboardEstudiante.jsp">
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/dao/EstudianteDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="58" column="79" lean-forward="true" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="79" />
+        <state relative-caret-position="246">
+          <caret line="101" column="29" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoriaestudiante/dao/AsesoriaEstudianteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="38" column="86" selection-start-line="38" selection-start-column="86" selection-end-line="38" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Administrador/DocentesGenerales.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="129" column="68" lean-forward="true" selection-start-line="128" selection-start-column="39" selection-end-line="129" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Docente/asesoriasAgendadas.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="120" column="59" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
           <folding>
             <element signature="n#style#0;n#li#0;n#div#0;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#0;n#div#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#li#0;n#div#2;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/dbDocente.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
@@ -1163,73 +1143,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/Administrador/DocentesGenerales.jsp">
+    <entry file="file://$PROJECT_DIR$/web/js/Administrador.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2111">
-          <caret line="196" column="86" selection-start-line="196" selection-start-column="22" selection-end-line="196" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/dbEstudiante.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" selection-start-line="2" selection-end-line="30" />
+        <state relative-caret-position="450">
+          <caret line="34" column="49" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="34" selection-end-column="49" />
           <folding>
-            <element signature="e#5133#6413#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/dbDocente.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/dao/EstudianteDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="101" column="29" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/asesoriaestudiante/dao/AsesoriaEstudianteDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="38" column="86" selection-start-line="38" selection-start-column="86" selection-end-line="38" selection-end-column="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Docente/asesoriasAgendadas.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="120" column="59" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#div#0;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#div#1;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#div#2;n#ul#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#26#306#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mx/edu/utez/sigea/estudiante/Controller/EstudianteServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="141" column="50" selection-start-line="141" selection-start-column="38" selection-end-line="141" selection-end-column="50" />
+        <state relative-caret-position="485">
+          <caret line="145" column="53" selection-start-line="145" selection-start-column="38" selection-end-line="145" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/styleR.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="155" column="59" selection-start-line="155" selection-start-column="59" selection-end-line="155" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/agendadas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/dbEstudiante.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="43" column="25" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="25" />
+          <folding>
+            <element signature="e#5133#6413#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Estudiante/dashboardEstudiante.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="180" column="33" lean-forward="true" selection-start-line="180" selection-start-column="33" selection-end-line="180" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/Estudiante/asesoriasAgendadas.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="130" column="128" selection-start-line="130" selection-start-column="128" selection-end-line="130" selection-end-column="128" />
+        <state relative-caret-position="63">
+          <caret line="93" column="70" selection-start-line="93" selection-start-column="70" selection-end-line="93" selection-end-column="70" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

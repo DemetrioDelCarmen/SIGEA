@@ -143,6 +143,7 @@ public class EstudianteServlet extends HttpServlet {
                 request.setAttribute("primerApellido", estudiante.getPrimerApellido_estudiante());
                 request.setAttribute("segundoApellido", estudiante.getSegundoApellido_estudiante());
                 request.setAttribute("genero", estudiante.getIdGenero());
+                request.setAttribute("numeroAsesorias",asesorias.size());
                 request.setAttribute("asesorias",asesorias);
                 request.getRequestDispatcher("/Estudiante/asesoriasAgendadas.jsp").forward(request,response);
 
